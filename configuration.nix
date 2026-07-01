@@ -56,6 +56,9 @@
     btop
     fastfetch
     wireguard-tools
+    starship
+    wine
+    winetricks
   ];
 
   environment.variables = {
@@ -63,12 +66,14 @@
   };
 
   programs = {
-    niri = {
+    niri.enable = true;
+    fish.enable = true;
+    steam = {
       enable = true;
+      remotePlay.openFirewall = true;
+      dedicated.openFirewall = true;
     };
-    fish = {
-      enable = true;
-    };
+    gamemode.enable = true;
   };
 
   users = {
