@@ -17,6 +17,10 @@
 
   networking = {
     hostName = "dreamland";
+    nameservers = [
+      "1.1.1.1"
+      "9.9.9.9"
+    ]; # set dns to cloudflare & quad9
     networkmanager.enable = true;
   };
 
@@ -71,10 +75,12 @@
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
-      dedicated.openFirewall = true;
+      dedicatedServer.openFirewall = true;
     };
     gamemode.enable = true;
   };
+
+  nixpkgs.config.allowUnfree = true;
 
   users = {
     users.tsuki = {
