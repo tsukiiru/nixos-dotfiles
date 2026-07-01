@@ -517,7 +517,7 @@
     },
     "plugins": {
         "autoUpdate": false,
-        "notifyUpdates": true
+        "notifyUpdates": false,
     },
     "sessionMenu": {
         "countdownDuration": 5000,
@@ -627,7 +627,7 @@
         "boxBorderEnabled": false,
         "fontDefault": "Griun Ahyoung's Handwrite In 2019",
         "fontDefaultScale": 0.95,
-        "fontFixed": "0xProto Nerd Font Mono",
+        "fontFixed": "Cartograph CF",
         "fontFixedScale": 0.9,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": false,
@@ -639,7 +639,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/fox/Wallpapers",
+        "directory": "/home/tsuki/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -650,7 +650,7 @@
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
             {
-                "directory": "/home/fox/Wallpapers",
+                "directory": "/home/tsuki/Wallpapers",
                 "name": "eDP-1",
                 "wallpaper": ""
             }
@@ -678,7 +678,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "girls' last tour",
+        "wallhavenQuery": "",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",

@@ -28,7 +28,7 @@
     shellAliases = {
       la = "eza -l --icons";
       ls = "eza --icons";
-      nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#flake-btw";
+      nrs = "sudo nixos-rebuild switch --impure --flake ~/nixos-dotfiles#flake-btw";
     };
   };
 

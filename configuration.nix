@@ -10,12 +10,15 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
 
-  networking.hostName = "dreamland";
-
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "dreamland";
+    networkmanager.enable = true;
+  };
 
   # time.timeZone = "Europe/Amsterdam";
 
@@ -27,13 +30,15 @@
 
   security.polkit.enable = true;
 
-  services.gnome.gnome-keyring.enable = true;
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
+  services = {
+    gnome.gnome-keyring.enable = true;
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
+    flatpak.enable = true;
+    getty.autologinUser = "tsuki";
   };
-
-  services.getty.autologinUser = "tsuki";
 
   environment.systemPackages = with pkgs; [
     git
@@ -43,7 +48,6 @@
     ghostty
     p7zip
     eza
-    fish
     unzip
     rustup
     noctalia-shell
@@ -51,26 +55,29 @@
     ripgrep
     btop
     fastfetch
+    wireguard-tools
   ];
 
   environment.variables = {
     EDITOR = "nvim";
   };
 
-  programs.niri = {
-    enable = true;
+  programs = {
+    niri = {
+      enable = true;
+    };
+    fish = {
+      enable = true;
+    };
   };
 
-  programs.fish.enable = true;
-
-  users.users.tsuki = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    packages = with pkgs; [
-      tree
-    ];
+  users = {
+    users.tsuki = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" ];
+    };
+    defaultUserShell = pkgs.fish;
   };
-  users.defaultUserShell = pkgs.fish;
 
   nix.settings.experimental-features = [
     "nix-command"
