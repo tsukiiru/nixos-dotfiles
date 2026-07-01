@@ -1,0 +1,109 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "modules": [
+    /*
+    {
+      "type": "custom",
+      "format": "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n  ⠀⠀⠀⢀⣴⠖⠚⠛⠒⠶⠦⣤⡾⠋⠙⣦⣤⣤⣤⡴⠚⢳⡀⠀\n  ⠀⠀⢠⠟⠀⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠘⣇⠀\n  ⠀⣠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡆\n  ⣸⠋⠟⡀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⢧⣤⠆⢀⡀⢠⣤⡤⢸⡇\n  ⠹⣄⠀⠙⠛⠛⠉⠉⠹⣧⠀⠚⠓⢦⡀⠀⠀⠈⠉⠀⠀⢠⣿⡄\n  ⠀⠙⢳⢦⣤⣤⣤⢴⡿⡳⠶⢤⣤⡼⣷⠦⢤⣤⣤⡤⡴⣿⠞⠃\n  ⠀⠀⠁⠊⠁⠈⠈⠁⠀⠀⠈⠁⠉⠀⠁⠀⠉⠐⠁⠉⠀⠀⠀⠀      "
+    },*/ // cat :3
+    "break",
+    {
+      "type": "custom",
+      "format": "        ,--.\n,--,--, `--',--.  ,--.,---.  ,---.\n|      \\,--. \\  `'  /| .-. |(  .-'\n|  ||  ||  | /  /.  \\' '-' '.-'  `)\n`--''--'`--''--'  '--'`---' `----'"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "brightness": "light",
+      "paddingLeft": 8
+    },
+    "break",
+    {
+      "type": "users",
+      "format": "            haii {#magenta}{#bright_}{name}{#}{#}!",
+      "key": " "
+    },
+    {
+      "type": "uptime",
+      "format": "         up {#bright_}{hours} hrs, {minutes} mins{#}",
+      "key": " "
+    },
+    "break",
+    {
+      "type": "os",
+      "format": "{pretty-name}",
+      "key": "        distro",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "kernel",
+      "format": "{release}",
+      "key": "        kernel",
+      "keyColor": "red"
+    },
+    {
+      "type": "packages",
+      "format": "{all}",
+      "key": "          pkgs",
+      "keyColor": "blue"
+    },
+    {
+      "type": "shell",
+      "format": "{pretty-name}",
+      "key": "            sh",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "terminal",
+      "format": "{pretty-name}",
+      "key": "          term",
+      "keyColor": "green"
+    },
+    {
+      "type": "wm",
+      "format": "{pretty-name}",
+      "key": "            wm",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "disk",
+      "format": "{size-used} used",
+      "key": "          disk"
+    },
+    "break",
+    {
+      "type": "cpuusage",
+      "key": " ",
+      "format": "        {#magenta}{#bright_}cpu{#}{#} {min} {min-bar}"
+    },
+    {
+      "type": "memory",
+      "key": " ",
+      "format": "        {#magenta}{#bright_}ram{#}{#} {percentage} {percentage-bar}"
+    },
+    "break"
+  ],
+  "display": {
+    "percent": {
+      "width": 2,
+      "type": 3
+    },
+    "separator": " ★ ",
+    "bar": {
+      "char": {
+        "total": "⎯",
+        "elapsed": "⎯"
+      },
+      "width": 14,
+      "color": {
+        "total": "black",
+        "elapsed": "magenta"
+      },
+      "border": null
+    }
+  },
+  "logo": {
+    "type": "none"
+  }
+}
