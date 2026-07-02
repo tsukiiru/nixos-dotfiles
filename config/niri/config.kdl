@@ -160,7 +160,7 @@ binds {
     Alt+Space { spawn-sh "pkill fcitx5 || fcitx5"; }
     Mod+Return { spawn "ghostty"; }
     Mod+Space { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
-    Mod+E { spawn "nautilus"; }
+    Mod+E { spawn "yazi"; }
     Mod+W { spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     Mod+V { spawn "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
     Mod+T { spawn "noctalia-shell" "ipc" "call" "launcher" "emoji"; }

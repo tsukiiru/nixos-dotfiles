@@ -20,7 +20,7 @@
     nameservers = [
       "1.1.1.1"
       "9.9.9.9"
-    ]; # set dns to cloudflare & quad9
+    ]; # set dns to cloudflare
     networkmanager.enable = true;
   };
 
@@ -60,6 +60,11 @@
     winetricks
     wlsunset
     nodejs
+    imagemagick
+    yazi
+    xwayland-satellite
+    imv
+    ngrok
   ];
 
   environment.variables = {
