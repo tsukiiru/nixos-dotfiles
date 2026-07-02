@@ -12,6 +12,7 @@ return {
 				python = { "black" },
 				kdl = { "kdlfmt" },
         nix = {"nixfmt"},
+        json = { "prettier "},
 			},
 			format_on_save = {
 				timeout_ms = 500,

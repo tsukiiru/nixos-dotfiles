@@ -517,7 +517,7 @@
     },
     "plugins": {
         "autoUpdate": false,
-        "notifyUpdates": false,
+        "notifyUpdates": false
     },
     "sessionMenu": {
         "countdownDuration": 5000,
@@ -611,16 +611,7 @@
         "warningColor": ""
     },
     "templates": {
-        "activeTemplates": [
-            {
-                "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
-                "id": "ghostty"
-            }
-        ],
+        "activeTemplates": [],
         "enableUserTheming": false
     },
     "ui": {
@@ -639,7 +630,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/tsuki/Wallpapers",
+        "directory": "/home/tsuki/.config/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -650,7 +641,7 @@
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
             {
-                "directory": "/home/tsuki/Wallpapers",
+                "directory": "/home/tsuki/.config/Wallpapers",
                 "name": "eDP-1",
                 "wallpaper": ""
             }

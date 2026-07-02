@@ -74,6 +74,7 @@ window-rule {
 }
 
 spawn-at-startup "noctalia-shell"
+// spawn-at-startup "wlsunset" "-l" "21.0285" "-L" "105.8542" "-t" "4000" "-T" "4500"
 
 hotkey-overlay {
   skip-at-startup

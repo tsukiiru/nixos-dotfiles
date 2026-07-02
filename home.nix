@@ -37,8 +37,5 @@
   home.file.".config/ghostty".source = ./config/ghostty;
   home.file.".config/Wallpapers".source = ./config/Wallpapers;
   home.file.".config/fastfetch".source = ./config/fastfetch;
-  home.file.".config/noctalia" = {
-    source = ./config/noctalia;
-    recursive = true;
-  };
+  home.file.".config/noctalia".source = ./config/noctalia;
 }

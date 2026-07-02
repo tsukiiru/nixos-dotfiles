@@ -24,13 +24,7 @@
     networkmanager.enable = true;
   };
 
-  # time.timeZone = "Europe/Amsterdam";
-
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
+  time.timeZone = "Asia/Ho_Chi_Minh";
 
   security.polkit.enable = true;
 
@@ -62,7 +56,10 @@
     wireguard-tools
     starship
     wine
+    wine64
     winetricks
+    wlsunset
+    nodejs
   ];
 
   environment.variables = {
@@ -77,7 +74,6 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
-    gamemode.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
