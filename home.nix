@@ -46,7 +46,6 @@
       frameless = true;
 
       plugins = {
-        alwaysExpandProfiles.enable = true;
         betterGifPicker.enable = true;
         crashHandler.enable = true;
         fixCodeblockGap.enable = true;

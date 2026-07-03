@@ -55,8 +55,7 @@
     fastfetch
     wireguard-tools
     starship
-    wine
-    wine64
+    wineWow64Packages.stable
     winetricks
     wlsunset
     nodejs
@@ -65,6 +64,7 @@
     xwayland-satellite
     imv
     ngrok
+    gimp
   ];
 
   environment.variables = {

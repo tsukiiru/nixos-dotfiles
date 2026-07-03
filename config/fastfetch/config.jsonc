@@ -16,71 +16,71 @@
       "type": "colors",
       "symbol": "circle",
       "brightness": "light",
-      "paddingLeft": 10
+      "paddingLeft": 9
     },
     "break",
     {
       "type": "users",
-      "format": "              haii {#magenta}{#bright_}{name}{#}{#}!",
+      "format": "             haii {#magenta}{#bright_}{name}{#}{#}!",
       "key": " "
     },
     {
       "type": "uptime",
-      "format": "           up {#bright_}{hours} hrs, {minutes} mins{#}",
+      "format": "          up {#bright_}{hours} hrs, {minutes} mins{#}",
       "key": " "
     },
     "break",
     {
       "type": "os",
       "format": "{pretty-name}",
-      "key": "          distro",
+      "key": "         distro",
       "keyColor": "cyan"
     },
     {
       "type": "kernel",
       "format": "{release}",
-      "key": "          kernel",
+      "key": "         kernel",
       "keyColor": "red"
     },
     {
       "type": "packages",
       "format": "{all}",
-      "key": "            pkgs",
+      "key": "           pkgs",
       "keyColor": "blue"
     },
     {
       "type": "shell",
       "format": "{pretty-name}",
-      "key": "              sh",
+      "key": "             sh",
       "keyColor": "yellow"
     },
     {
       "type": "terminal",
       "format": "{pretty-name}",
-      "key": "            term",
+      "key": "           term",
       "keyColor": "green"
     },
     {
       "type": "wm",
       "format": "{pretty-name}",
-      "key": "              wm",
+      "key": "             wm",
       "keyColor": "magenta"
     },
     {
       "type": "disk",
       "format": "{size-used} used",
-      "key": "            disk"
+      "key": "           disk"
     },
     "break",
     {
       "type": "cpuusage",
       "key": " ",
-      "format": "          {#magenta}{#bright_}cpu{#}{#} {min} {min-bar}"
+      "format": "         {#magenta}{#bright_}cpu{#}{#} {min} {min-bar}"
     },
     {
       "type": "memory",
       "key": " ",
-      "format": "          {#magenta}{#bright_}ram{#}{#} {percentage} {percentage-bar}"
+      "format": "         {#magenta}{#bright_}ram{#}{#} {percentage} {percentage-bar}"
     },
     "break"
   ],
