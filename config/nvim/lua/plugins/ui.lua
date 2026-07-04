@@ -17,8 +17,23 @@ return {
 			},
 			hide_cursor = true,
 		},
-	}, -- i dont have the slightest idea whether this is working or not
-	{ "rachartier/tiny-glimmer.nvim", opts = {} },
+	},
+	{
+		"rachartier/tiny-glimmer.nvim",
+		opts = {
+			enabled = true,
+			disable_warnings = true,
+			autoreload = true,
+			overwrite = {
+				search = {
+					enabled = true,
+				},
+				undo = {
+					enabled = true,
+				},
+			},
+		},
+	},
 
 	-- dashboard
 	{

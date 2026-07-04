@@ -5,4 +5,4 @@ working-directory = home
 window-padding-x = 10
 window-padding-y = 5
 shell-integration = fish
-theme = kanagawa-paper-ink
+theme = kanagawa-paper-canvas
