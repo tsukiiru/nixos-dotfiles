@@ -1,5 +1,4 @@
-{ pkgs }: with pkgs;
-[
+pkgs: with pkgs; [
   git
   neovim
   tealdeer
@@ -30,5 +29,4 @@
   vpl-gpu-rt
   python3
   aseprite
-
 ]

@@ -6,6 +6,7 @@
 }:
 let
   src = import ./home-manager/sourcing.nix { };
+  programs = import ./home-manager/programs/main.nix { };
 in
 {
   imports = [
@@ -20,5 +21,5 @@ in
   }
   // src;
 
-  programs = import ./home-manager/programs/main.nix { };
+  programs = programs;
 }
