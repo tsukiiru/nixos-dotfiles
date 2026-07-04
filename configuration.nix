@@ -68,6 +68,7 @@
     intel-media-driver
     vpl-gpu-rt
     python3
+    aseprite
   ];
 
   environment.variables = {
