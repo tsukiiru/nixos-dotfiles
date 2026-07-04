@@ -1,7 +1,7 @@
 { }: {
   enable = true;
   settings = {
-    format = "$username$directory$git_branch$git_status$fill$lua$c$nodejs$rust$python$time\n [->](fg:green) ";
+    format = "$username$directory$git_branch$git_status$fill$lua$c$nodejs$rust$python$timen [->](fg:green) ";
     directory = {
       format = "[ $path ]($style)";
       style = "fg:blue bold";
@@ -28,15 +28,15 @@
       style = "fg:orange bold";
       format = "([$all_status$ahead_behind]($style)) ";
       up_to_date = "[✓](fg:teal bold)";
-      untracked = "[?\($count\)](fg:orange bold)";
-      stashed = "[\$](fg:purple bold)";
-      modified = "[!\($count\)](fg:teal bold)";
-      renamed = "[»\($count\)](fg:yellow bold)";
-      deleted = "[✘\($count\)](style bold)";
-      staged = "[++\($count\)](fg:blue bold)";
-      ahead = "[⇡\(${count}\)](fg:gray_1 bold)";
-      diverged = "⇕[\[](fg:purple bold)[⇡\(${ahead_count}\)](fg:blue bold)[⇣\(${behind_count}\)](fg:yellow bold)[\]](fg:purple bold)";
-      behind = "[⇣\(${count}\)](fg:orange bold)";
+      untracked = "[?($count)](fg:orange bold)";
+      stashed = "[$](fg:purple bold)";
+      modified = "[!($count)](fg:teal bold)";
+      renamed = "[»($count)](fg:yellow bold)";
+      deleted = "[✘($count)](style bold)";
+      staged = "[++($count)](fg:blue bold)";
+      ahead = "[⇡($count)](fg:gray_1 bold)";
+      diverged = "⇕[[](fg:purple bold)[⇡($ahead_count)](fg:blue bold)[⇣(behind_count)](fg:yellow bold)[]](fg:purple bold)";
+      behind = "[⇣($count)](fg:orange bold)";
     };
     time = {
       format = " [$time -.<~ ★]($style)";
