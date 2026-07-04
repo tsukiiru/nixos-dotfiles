@@ -1,0 +1,34 @@
+{ pkgs }: with pkgs;
+[
+  git
+  neovim
+  tealdeer
+  bat
+  ghostty
+  p7zip
+  eza
+  unzip
+  rustup
+  noctalia-shell
+  tree
+  ripgrep
+  btop
+  fastfetch
+  wireguard-tools
+  starship
+  wineWow64Packages.stable
+  winetricks
+  wlsunset
+  nodejs
+  imagemagick
+  yazi
+  xwayland-satellite
+  imv
+  ngrok
+  gimp
+  intel-media-driver
+  vpl-gpu-rt
+  python3
+  aseprite
+
+]

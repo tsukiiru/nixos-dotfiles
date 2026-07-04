@@ -1,4 +1,4 @@
-{
+rec {
   description = "flake to keep your head cool even in the most scorchingly hot weather! :3";
 
   inputs = {
@@ -18,7 +18,10 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }:
+    { nixpkgs, home-manager, ... }:
+    let
+      home = import ./home.nix;
+    in
     {
       nixosConfigurations.flake-btw = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -29,7 +32,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.tsuki = import ./home.nix;
+              users.tsuki = home;
               extraSpecialArgs = { inherit inputs; };
               backupFileExtension = "backup";
             };

@@ -4,7 +4,9 @@
   pkgs,
   ...
 }:
-
+let
+  sys_pkgs = import ./system_packages.nix pkgs;
+in
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
@@ -38,39 +40,7 @@
     getty.autologinUser = "tsuki";
   };
 
-  environment.systemPackages = with pkgs; [
-    git
-    neovim
-    tealdeer
-    bat
-    ghostty
-    p7zip
-    eza
-    unzip
-    rustup
-    noctalia-shell
-    tree
-    ripgrep
-    btop
-    fastfetch
-    wireguard-tools
-    starship
-    wineWow64Packages.stable
-    winetricks
-    wlsunset
-    nodejs
-    imagemagick
-    yazi
-    xwayland-satellite
-    imv
-    ngrok
-    gimp
-    intel-media-driver
-    vpl-gpu-rt
-    python3
-    aseprite
-  ];
-
+  environment.systemPackages = sys_pkgs;
   environment.variables = {
     EDITOR = "nvim";
   };
