@@ -17,7 +17,7 @@ return {
 			},
 			hide_cursor = true,
 		},
-	}, -- i dont have the slightest idea if this is working or not
+	}, -- i dont have the slightest idea whether this is working or not
 	{ "rachartier/tiny-glimmer.nvim", opts = {} },
 
 	-- dashboard
@@ -67,7 +67,7 @@ return {
 					},
 					footer = {
 						"",
-						"   don't forget to touch grass! :3",
+						"   don't forget to stay hydrated! :3",
 					},
 				},
 			})
@@ -80,7 +80,7 @@ return {
 			vim.api.nvim_set_hl(0, "shortcut_4", { fg = "#c4a7e7" })
 		end,
 	},
-
+	--[[
 	{
 		"folke/snacks.nvim",
 		lazy = false,
@@ -125,13 +125,7 @@ return {
 			},
 		},
 
-		config = function(_, opts)
-			if vim.o.filetype == "lazy" then
-				vim.cmd([[messages clear]])
-			end
-			require("noice").setup(opts)
-		end,
-	},
+	},]]
 
 	-- cool looking bar
 	{
@@ -152,6 +146,9 @@ return {
 					component_separators = { left = "", right = "" },
 					section_separators = { left = "", right = "" },
 					globalstatus = true,
+					hide = {
+						statusline = false,
+					},
 				},
 				sections = {
 					lualine_a = { "mode" },
@@ -204,7 +201,6 @@ return {
 			require("nvim-tree").setup()
 
 			vim.keymap.set("n", "<leader> e", ":NvimTreeToggle <CR>")
-			vim.keymap.set("n", "<leader> E", ":NvimTreeFocus <CR>")
 
 			vim.api.nvim_set_hl(0, "NvimTreeFolderName", { bold = true })
 			vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { bold = true })

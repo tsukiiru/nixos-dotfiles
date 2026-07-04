@@ -20,7 +20,7 @@
     nameservers = [
       "1.1.1.1"
       "9.9.9.9"
-    ]; # set dns to cloudflare
+    ]; # set dns to cloudflare & quad9
     networkmanager.enable = true;
   };
 
@@ -65,6 +65,9 @@
     imv
     ngrok
     gimp
+    intel-media-driver
+    vpl-gpu-rt
+    python3
   ];
 
   environment.variables = {
@@ -79,6 +82,12 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        stylua
+      ];
+    };
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -89,6 +98,11 @@
       extraGroups = [ "wheel" ];
     };
     defaultUserShell = pkgs.fish;
+  };
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
   };
 
   nix.settings.experimental-features = [
