@@ -1,7 +1,7 @@
 { }: {
   enable = true;
   settings = {
-    format = "$username$directory$git_branch$git_status$fill$lua$c$nodejs$rust$python$timen [->](fg:green) ";
+    format = "$username$directory$git_branch$git_status$fill$lua$c$nodejs$rust$python$time\n [->](fg:green) ";
     directory = {
       format = "[ $path ]($style)";
       style = "fg:blue bold";
