@@ -57,6 +57,7 @@ in
       enable = true;
       libraries = with pkgs; [
         stylua
+        rust-analyzer
       ];
     };
   };

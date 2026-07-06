@@ -29,4 +29,5 @@ pkgs: with pkgs; [
   vpl-gpu-rt
   python3
   aseprite
+  xdg-desktop-portal-gnome
 ]
