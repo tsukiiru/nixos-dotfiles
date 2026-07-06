@@ -31,4 +31,8 @@ pkgs: with pkgs; [
   python3
   aseprite
   xdg-desktop-portal-gnome
+  xdg-desktop-portal-gtk
+  xdg-desktop-portal-wlr
+  fontconfig
+  nautilus
 ]
