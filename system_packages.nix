@@ -8,6 +8,7 @@ pkgs: with pkgs; [
   eza
   unzip
   rustup
+  clang
   noctalia-shell
   tree
   ripgrep

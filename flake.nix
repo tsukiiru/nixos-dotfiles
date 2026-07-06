@@ -15,13 +15,26 @@
         home-manager.follows = "home-manager";
       };
     };
+    rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }:
+    inputs@{
+      nixpkgs,
+      home-manager,
+      rust-overlay,
+      ...
+    }:
+    let
+      system = "x86_64-linux";
+      overlays = [ (import rust-overlay) ];
+      pkgs = import nixpkgs {
+        inherit system overlays;
+      };
+    in
     {
       nixosConfigurations.flake-btw = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
@@ -36,5 +49,25 @@
           }
         ];
       };
+
+      devShells.${system}.default =
+        with pkgs;
+        mkShell rec {
+          buildInputs = [
+            pkg-config
+            libx11
+            libxcursor
+            libxrandr
+            libxi
+            libxcb
+            libxkbcommon
+            vulkan-loader
+            wayland
+          ];
+
+          shellHook = ''
+            export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${builtins.toString (pkgs.lib.makeLibraryPath buildInputs)}";
+          '';
+        };
     };
 }
