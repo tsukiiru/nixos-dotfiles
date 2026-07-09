@@ -34,5 +34,7 @@ pkgs: with pkgs; [
   xdg-desktop-portal-gtk
   xdg-desktop-portal-wlr
   fontconfig
-  nautilus
+  yt-dlp
+  ffmpeg
+  blender
 ]
