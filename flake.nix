@@ -16,6 +16,7 @@
       };
     };
     rust-overlay.url = "github:oxalica/rust-overlay";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
   outputs =

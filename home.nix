@@ -6,12 +6,13 @@
 }:
 let
   src = import ./home-manager/sourcing.nix { };
-  programs = import ./home-manager/programs/main.nix { };
+  programs = import ./home-manager/programs/main.nix { inherit inputs pkgs; };
 in
 {
   imports = [
     inputs.zen-browser.homeModules.twilight-official
     inputs.nixcord.homeModules.nixcord
+    inputs.spicetify-nix.homeManagerModules.default
   ];
 
   home = {

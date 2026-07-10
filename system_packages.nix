@@ -37,4 +37,5 @@ pkgs: with pkgs; [
   yt-dlp
   ffmpeg
   blender
+  spotify
 ]
