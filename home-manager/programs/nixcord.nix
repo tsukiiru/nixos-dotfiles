@@ -2,12 +2,14 @@
   enable = true;
   discord.equicord.enable = true;
 
+  quickCss = ''
+    @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/solar.css");
+    @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/moreicons.css");
+    @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/file.css");
+  '';
+
   config = {
-    themeLinks = [
-      "https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/file.css"
-      "https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/solar.css"
-      "https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/moreicons.css"
-    ];
+    useQuickCss = true;
     frameless = true;
 
     plugins = {

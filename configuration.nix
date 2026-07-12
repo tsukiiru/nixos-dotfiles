@@ -40,9 +40,11 @@ in
     getty.autologinUser = "tsuki";
   };
 
-  environment.systemPackages = sys_pkgs;
-  environment.variables = {
-    EDITOR = "nvim";
+  environment = {
+    systemPackages = sys_pkgs;
+    variables = {
+      EDITOR = "nvim";
+    };
   };
 
   programs = {
