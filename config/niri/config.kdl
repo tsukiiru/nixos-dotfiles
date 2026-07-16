@@ -50,15 +50,15 @@ layout {
     }
     shadow {
         on
-        softness 30
-        spread 4
+        softness 0
+        spread 5
         offset x=3 y=3
         color "#00000090"
         draw-behind-window true
     }
 }
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 0
     clip-to-geometry true
     draw-border-with-background false
 }

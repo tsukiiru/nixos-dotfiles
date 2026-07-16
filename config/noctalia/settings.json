@@ -48,7 +48,7 @@
         "capsuleOpacity": 1,
         "contentPadding": 2,
         "density": "comfortable",
-        "displayMode": "auto_hide",
+        "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
         "fontScale": 1,
         "frameRadius": 12,
@@ -237,12 +237,12 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": false,
-        "generationMethod": "vibrant",
+        "darkMode": true,
+        "generationMethod": "rainbow",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Kanagawa Paper",
+        "predefinedScheme": "Oxide",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -358,7 +358,7 @@
         "enableLockScreenMediaControls": false,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
-        "iRadiusRatio": 1,
+        "iRadiusRatio": 0,
         "keybinds": {
             "keyDown": [
                 "Down"
@@ -392,9 +392,9 @@
         ],
         "lockScreenTint": 0,
         "passwordChars": false,
-        "radiusRatio": 1,
+        "radiusRatio": 0,
         "reverseScroll": false,
-        "scaleRatio": 0.9500000000000001,
+        "scaleRatio": 0.9,
         "screenRadiusRatio": 1,
         "shadowDirection": "bottom_right",
         "shadowOffsetX": 2,
@@ -618,9 +618,9 @@
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "Griun Ahyoung's Handwrite In 2019",
-        "fontDefaultScale": 0.95,
-        "fontFixed": "Cartograph CF",
+        "fontDefault": "Cozette",
+        "fontDefaultScale": 1,
+        "fontFixed": "Cozette",
         "fontFixedScale": 0.9,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
