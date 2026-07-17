@@ -10,3 +10,10 @@ keybind = performable:ctrl+alt+l=goto_split:right
 keybind = performable:ctrl+alt+h=goto_split:left
 keybind = performable:ctrl+alt+j=goto_split:down
 keybind = performable:ctrl+alt+k=goto_split:up
+
+gtk-single-instance = true
+gtk-titlebar = false
+gtk-tabs-location = top
+gtk-toolbar-style = flat
+gtk-titlebar-style = native
+gtk-wide-tabs = false
