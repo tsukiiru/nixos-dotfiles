@@ -6,6 +6,24 @@
     @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/solar.css");
     @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/moreicons.css");
     @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/file.css");
+        
+    :root,
+    .theme-dark {
+      --window-tint: #0005;
+      --theme-background-image: url("https://github.com/tsukiiru/quickCSS-discord/blob/main/Girls-Last-Tour-3.webp?raw=true");
+      --enable-blur: 1;
+      --blur-strength: 6px;
+      --custom-app-top-bar-height: 12px;
+    }
+
+    body {
+      /*letter-spacing: -0.02ch;*/
+      --font-primary: "CozetteVector";
+      --font-display: "CozetteVector";
+      --font-code: "CozetteVector";
+      /* css doesnt like bitmap fonts ;-; */
+    }
+
   '';
 
   config = {

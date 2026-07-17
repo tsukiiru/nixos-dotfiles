@@ -38,4 +38,6 @@ pkgs: with pkgs; [
   ffmpeg
   blender
   spotify
+  libstrangle
+  nautilus
 ]

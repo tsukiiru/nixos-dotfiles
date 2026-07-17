@@ -1,8 +1,12 @@
-font-family = Cartograph CF
-font-size = 11
+font-family = Cozette
 background-opacity = 1.0
 working-directory = home
 window-padding-x = 10
 window-padding-y = 5
 shell-integration = fish
 theme = oxide
+
+keybind = performable:ctrl+alt+l=goto_split:right
+keybind = performable:ctrl+alt+h=goto_split:left
+keybind = performable:ctrl+alt+j=goto_split:down
+keybind = performable:ctrl+alt+k=goto_split:up
