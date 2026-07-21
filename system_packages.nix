@@ -3,7 +3,6 @@ pkgs: with pkgs; [
   neovim
   tealdeer
   bat
-  ghostty
   p7zip
   eza
   unzip
@@ -39,5 +38,8 @@ pkgs: with pkgs; [
   blender
   spotify
   libstrangle
-  nautilus
+  nix-tree
+  mono
+  fd
+  wezterm
 ]

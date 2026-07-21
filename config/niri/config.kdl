@@ -132,14 +132,15 @@ binds {
         spawn-sh "pkill fcitx5 || fcitx5"
     }
     Mod+Return {
-        spawn "ghostty"
+        spawn "wezterm"
     }
     Mod+Space {
         spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"
     }
+    /*
     Mod+E {
-        spawn "ghostty -e yazi"
-    }
+    spawn "wezterm -e yazi"
+    }*/
     Mod+W {
         spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"
     }
@@ -152,9 +153,9 @@ binds {
     Mod+G {
         spawn "noctalia-shell" "ipc" "call" "wallpaper" "toggle"
     }
-    Mod+R {
-        spawn "recorder.sh"
-    }
+    /*    Mod+R {
+    spawn "recorder.sh"
+    }*/
     Mod+O repeat=false {
         toggle-overview
     }

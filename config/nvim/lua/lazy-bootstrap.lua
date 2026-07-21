@@ -16,7 +16,7 @@ require("lazy").setup({
 		{ import = "plugins" },
 	},
 	-- colorscheme that will be used when installing plugins.
-	install = { colorscheme = { "kanagawa-paper-ink" } },
+	install = { colorscheme = { "kanagawa-paper-canvas" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 	rocks = { enabled = false },

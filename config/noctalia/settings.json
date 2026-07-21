@@ -23,7 +23,7 @@
     "showCategories": false,
     "showIconBackground": false,
     "sortByMostUsed": true,
-    "terminalCommand": "ghostty -e",
+    "terminalCommand": "wezterm -e",
     "viewMode": "list"
   },
   "audio": {
@@ -71,7 +71,7 @@
     "showOnWorkspaceSwitch": true,
     "showOutline": false,
     "useSeparateOpacity": false,
-    "widgetSpacing": 6,
+    "widgetSpacing": 2,
     "widgets": {
       "center": [
         {
@@ -230,12 +230,12 @@
     ]
   },
   "colorSchemes": {
-    "darkMode": true,
+    "darkMode": false,
     "generationMethod": "rainbow",
     "manualSunrise": "06:30",
     "manualSunset": "18:30",
     "monitorForColors": "",
-    "predefinedScheme": "Oxide",
+    "predefinedScheme": "Kanagawa Paper",
     "schedulingMode": "off",
     "syncGsettings": true,
     "useWallpaperColors": false
@@ -347,7 +347,7 @@
     "enableLockScreenMediaControls": false,
     "enableShadows": true,
     "forceBlackScreenCorners": false,
-    "iRadiusRatio": 0,
+    "iRadiusRatio": 0.6,
     "keybinds": {
       "keyDown": [
         "Down"
@@ -380,9 +380,9 @@
     "lockScreenMonitors": [],
     "lockScreenTint": 0,
     "passwordChars": false,
-    "radiusRatio": 0,
+    "radiusRatio": 0.6,
     "reverseScroll": false,
-    "scaleRatio": 0.9,
+    "scaleRatio": 0.8,
     "screenRadiusRatio": 1,
     "shadowDirection": "bottom_right",
     "shadowOffsetX": 2,
@@ -448,12 +448,12 @@
   },
   "nightLight": {
     "autoSchedule": true,
-    "dayTemp": "3066",
+    "dayTemp": "2585",
     "enabled": true,
     "forced": false,
     "manualSunrise": "06:30",
     "manualSunset": "18:30",
-    "nightTemp": "2566"
+    "nightTemp": "1761"
   },
   "noctaliaPerformance": {
     "disableDesktopWidgets": true,
@@ -464,8 +464,8 @@
     "clearDismissed": true,
     "criticalUrgencyDuration": 15,
     "density": "default",
-    "enableBatteryToast": true,
-    "enableKeyboardLayoutToast": true,
+    "enableBatteryToast": false,
+    "enableKeyboardLayoutToast": false,
     "enableMarkdown": true,
     "enableMediaToast": false,
     "enabled": true,
@@ -603,9 +603,9 @@
   },
   "ui": {
     "boxBorderEnabled": false,
-    "fontDefault": "Cozette",
-    "fontDefaultScale": 1,
-    "fontFixed": "Cozette",
+    "fontDefault": "Cartograph CF",
+    "fontDefaultScale": 0.92,
+    "fontFixed": "Cartograph CF",
     "fontFixedScale": 0.9,
     "panelBackgroundOpacity": 1,
     "panelsAttachedToBar": true,
@@ -645,7 +645,8 @@
     "transitionDuration": 1500,
     "transitionEdgeSmoothness": 0.05,
     "transitionType": [
-      "disc"
+      "disc",
+      "stripes"
     ],
     "useOriginalImages": false,
     "useSolidColor": false,

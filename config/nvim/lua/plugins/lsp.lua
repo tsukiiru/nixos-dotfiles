@@ -11,7 +11,8 @@ return {
 				"html-lsp",
 				"json-lsp",
 				"typescript-language-server",
-				-- cmp
+				"nil",
+				-- fmt
 				"prettier",
 				"nixfmt",
 				"kdlfmt",
