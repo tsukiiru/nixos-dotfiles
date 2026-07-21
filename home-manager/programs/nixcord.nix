@@ -18,9 +18,9 @@
 
     body {
       /*letter-spacing: -0.02ch;*/
-      --font-primary: "CozetteVector";
-      --font-display: "CozetteVector";
-      --font-code: "CozetteVector";
+      --font-primary: "Cartograph CF";
+      --font-display: "Cartograph CF";
+      --font-code: "Cartograph CF";
       /* css doesnt like bitmap fonts ;-; */
     }
 
@@ -40,7 +40,7 @@
       iLoveSpam.enable = true;
       implicitRelationships.enable = true;
       ircColors = {
-        enable = true;
+        enable = false;
         lightness = 80;
       };
       mentionAvatars.enable = true;
