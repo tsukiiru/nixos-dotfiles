@@ -89,11 +89,11 @@
       "width": 2,
       "type": 3
     },
-    "separator": " ★ ",
+    "separator": " • ",
     "bar": {
       "char": {
-        "total": "⎯",
-        "elapsed": "⎯"
+        "total": "─",
+        "elapsed": "─"
       },
       "width": 14,
       "color": {

@@ -1,7 +1,8 @@
 { }: {
   enable = true;
   settings = {
-    format = "$username$directory$git_branch$git_status$fill$lua$c$nodejs$rust$python$time\n [->](fg:green) ";
+    format = "$username$directory$git_branch$git_status$fill$lua$c$nodejs$rust$python\n[└─>](fg:green) ";
+    right_format = "$time";
     directory = {
       format = "[ $path ]($style)";
       style = "fg:blue bold";
@@ -11,7 +12,7 @@
     };
     directory.substitutions = {
       Documents = "󰈙";
-      Downloads = "🢳";
+      Downloads = "";
       Music = "";
       Pictures = "";
     };
@@ -22,7 +23,7 @@
     git_branch = {
       format = "[✦](fg:gray_3)[ $symbol$branch]($style) ";
       style = "fg:purple";
-      symbol = "";
+      symbol = " ";
     };
     git_status = {
       style = "fg:orange bold";
@@ -45,7 +46,7 @@
       use_12hr = true;
     };
     username = {
-      format = "[✨ $user]($style) [✦](fg:gray_3)";
+      format = "[󰄛 $user]($style) [✦](fg:gray_3)";
       show_always = true;
       style_root = "fg:red bold";
       style_user = "fg:pink bold";
