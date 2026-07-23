@@ -6,8 +6,6 @@ pkgs: with pkgs; [
   p7zip
   eza
   unzip
-  rustup
-  clang
   noctalia-shell
   tree
   ripgrep
@@ -42,4 +40,5 @@ pkgs: with pkgs; [
   mono
   fd
   wezterm
+  vlc
 ]

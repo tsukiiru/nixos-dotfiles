@@ -50,25 +50,5 @@
           }
         ];
       };
-
-      devShells.${system}.default =
-        with pkgs;
-        mkShell rec {
-          buildInputs = [
-            pkg-config
-            libx11
-            libxcursor
-            libxrandr
-            libxi
-            libxcb
-            libxkbcommon
-            vulkan-loader
-            wayland
-          ];
-
-          shellHook = ''
-            export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${builtins.toString (pkgs.lib.makeLibraryPath buildInputs)}";
-          '';
-        };
     };
 }
