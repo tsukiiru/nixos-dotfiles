@@ -111,6 +111,8 @@ function tab_title(tab_info)
 		icon = "󰒲"
 	elseif app == "nix" then
 		icon = "󱄅"
+	elseif app == "git" then
+		icon = ""
 	end
 
 	title = tab_info.tab_index + 1 .. ":" .. app .. " " .. icon
