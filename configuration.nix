@@ -56,11 +56,9 @@ in
       dedicatedServer.openFirewall = true;
     };
     nix-ld = {
-      enable = false;
+      enable = true;
       libraries = with pkgs; [
         stylua
-        rust-analyzer
-        gcc
       ];
     };
   };
