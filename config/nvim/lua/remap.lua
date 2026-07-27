@@ -1,4 +1,5 @@
 -- file to remap keys / add key binds
+vim.g.mapleader = " "
 vim.keymap.set("v", "< S-Down> ", ":m '> +1< CR> gv=gv")
 vim.keymap.set("v", "< S-Up> ", ":m '<-2< CR> gv=gv")
 

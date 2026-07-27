@@ -603,9 +603,9 @@
   },
   "ui": {
     "boxBorderEnabled": false,
-    "fontDefault": "Cartograph CF",
+    "fontDefault": "AnnotationMono",
     "fontDefaultScale": 0.92,
-    "fontFixed": "Cartograph CF",
+    "fontFixed": "AnnotationMono",
     "fontFixedScale": 0.9,
     "panelBackgroundOpacity": 1,
     "panelsAttachedToBar": true,

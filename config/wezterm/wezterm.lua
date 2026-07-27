@@ -3,11 +3,11 @@ local mux = wezterm.mux
 local config = wezterm.config_builder()
 
 config.font_size = 10
-config.font = wezterm.font("Cartograph CF")
+config.font = wezterm.font("AnnotationMono")
 config.color_scheme = "kanagawa-paper-canvas"
 
 config.window_frame = {
-	font = wezterm.font("Cartograph CF"),
+	font = wezterm.font("AnnotationMono"),
 }
 
 config.enable_tab_bar = true
