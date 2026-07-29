@@ -17,13 +17,11 @@
     }
 
     body {
-      /*letter-spacing: -0.02ch;*/
-      --font-primary: "Cartograph CF";
-      --font-display: "Cartograph CF";
-      --font-code: "Cartograph CF";
-      /* css doesnt like bitmap fonts ;-; */
+      letter-spacing: -0.1ch;
+      --font-primary: "Annotation Mono";
+      --font-display: "Annotation Mono";
+      --font-code: "Annotation Mono";
     }
-
   '';
 
   config = {

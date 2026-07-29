@@ -6,15 +6,24 @@
 }:
 let
   sys_pkgs = import ./system_packages.nix pkgs;
+  milk = pkgs.fetchFromGitHub {
+    owner = "tsukiiru";
+    repo = "MilkGrub";
+    rev = "28644023f74e4830d97ef3a551714fe6c984f02b";
+    sha256 = "0a3ap455sl0npch5jh51gqc18fj7d97r5xqrqlj29v56sm4k8cvj";
+  };
 in
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
   ];
 
+  console.font = "${pkgs.kbd}/share/consolefonts/cybercafe.fnt.gz";
+
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
+    grub.theme = milk;
   };
 
   networking = {
