@@ -9,8 +9,8 @@ in
     adblock
     shuffle
   ];
-  enabledCustomApps = with spicePkgs.apps; [ ];
-  enabledSnippets = with spicePkgs.snippets; [ ];
+  #enabledCustomApps = with spicePkgs.apps; [ ];
+  #enabledSnippets = with spicePkgs.snippets; [ ];
 
   theme = spicePkgs.themes.catppuccin;
   colorScheme = "mocha";

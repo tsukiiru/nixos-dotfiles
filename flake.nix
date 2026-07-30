@@ -28,10 +28,6 @@
     }:
     let
       system = "x86_64-linux";
-      overlays = [ (import rust-overlay) ];
-      pkgs = import nixpkgs {
-        inherit system overlays;
-      };
     in
     {
       nixosConfigurations.flake-btw = nixpkgs.lib.nixosSystem {

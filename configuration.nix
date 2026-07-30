@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -21,9 +19,13 @@ in
   console.font = "${pkgs.kbd}/share/consolefonts/cybercafe.fnt.gz";
 
   boot.loader = {
-    systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
-    grub.theme = milk;
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+      theme = milk;
+    };
   };
 
   networking = {
