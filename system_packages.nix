@@ -41,5 +41,5 @@ pkgs: with pkgs; [
   fd
   wezterm
   vlc
-  proton-vpn
+  wl-clipboard-rs
 ]

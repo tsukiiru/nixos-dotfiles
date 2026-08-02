@@ -16,7 +16,7 @@ in
     /etc/nixos/hardware-configuration.nix
   ];
 
-  console.font = "${pkgs.kbd}/share/consolefonts/cybercafe.fnt.gz";
+  console.font = "t850b";
 
   boot.loader = {
     efi.canTouchEfiVariables = true;
