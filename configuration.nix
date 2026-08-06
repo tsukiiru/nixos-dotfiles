@@ -68,6 +68,8 @@ in
     };
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   users = {
     users.tsuki = {
       isNormalUser = true;

@@ -3,25 +3,30 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
 
     nixcord = {
-      nixpkgs.follows = "nixpkgs";
       url = "github:FlameFlag/nixcord";
-    };
-    home-manager = {
-      nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/home-manager";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
       };
     };
     spicetify-nix = {
-      nixpkgs.follows = "nixpkgs";
       url = "github:Gerg-L/spicetify-nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
   };
 
@@ -35,8 +40,6 @@
       system = "x86_64-linux";
     in
     {
-      nixpkgs.config.allowUnfree = true;
-
       nixosConfigurations.flake-btw = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
