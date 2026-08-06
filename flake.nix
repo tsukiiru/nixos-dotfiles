@@ -3,10 +3,14 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixcord.url = "github:FlameFlag/nixcord";
+
+    nixcord = {
+      nixpkgs.follows = "nixpkgs";
+      url = "github:FlameFlag/nixcord";
+    };
     home-manager = {
+      nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -15,21 +19,24 @@
         home-manager.follows = "home-manager";
       };
     };
-    rust-overlay.url = "github:oxalica/rust-overlay";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+      nixpkgs.follows = "nixpkgs";
+      url = "github:Gerg-L/spicetify-nix";
+    };
   };
 
   outputs =
     inputs@{
       nixpkgs,
       home-manager,
-      rust-overlay,
       ...
     }:
     let
       system = "x86_64-linux";
     in
     {
+      nixpkgs.config.allowUnfree = true;
+
       nixosConfigurations.flake-btw = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [

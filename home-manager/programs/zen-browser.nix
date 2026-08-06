@@ -1,4 +1,4 @@
-{ }: {
+{ ... }: {
   enable = true;
   setAsDefaultBrowser = true;
 

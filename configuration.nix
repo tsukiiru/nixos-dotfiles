@@ -66,15 +66,7 @@ in
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
-    nix-ld = {
-      enable = true;
-      libraries = with pkgs; [
-        stylua
-      ];
-    };
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   users = {
     users.tsuki = {

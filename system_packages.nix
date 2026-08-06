@@ -1,45 +1,57 @@
-pkgs: with pkgs; [
+{ pkgs, ... }: with pkgs;
+[
+  # cli
   git
-  neovim
   tealdeer
   bat
-  p7zip
   eza
-  unzip
-  noctalia-shell
   tree
   ripgrep
-  btop
+  fd
   fastfetch
-  wireguard-tools
-  starship
-  wineWow64Packages.stable
-  winetricks
-  wlsunset
-  nodejs
-  imagemagick
+  fontconfig
+
+  # tui
+  btop
+  nix-tree
   yazi
-  xwayland-satellite
-  imv
+  neovim
+
+  # archive
+  p7zip
+  unzip
+
+  # terminal
+  starship
+  wezterm
+
+  # networking
+  wireguard-tools
   ngrok
-  gimp
-  intel-media-driver
-  vpl-gpu-rt
-  python3
-  aseprite
+
+  # wayland / portals
+  noctalia-shell
+  xwayland-satellite
   xdg-desktop-portal-gnome
   xdg-desktop-portal-gtk
   xdg-desktop-portal-wlr
-  fontconfig
-  yt-dlp
-  ffmpeg
-  blender
-  spotify
+
+  # wine
+  wineWow64Packages.stable
+  winetricks
   libstrangle
-  nix-tree
-  mono
-  fd
-  wezterm
+
+  # graphics
+  intel-media-driver
+  vpl-gpu-rt
+
+  # media
+  imagemagick
+  imv
+  gimp
+  aseprite
+  blender
+  ffmpeg
+  yt-dlp
   vlc
-  wl-clipboard-rs
 ]

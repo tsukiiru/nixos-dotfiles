@@ -23,7 +23,7 @@
     "showCategories": false,
     "showIconBackground": false,
     "sortByMostUsed": true,
-    "terminalCommand": "ghostty -e",
+    "terminalCommand": "wezterm -e",
     "viewMode": "list"
   },
   "audio": {

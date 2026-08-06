@@ -4,14 +4,15 @@
   ...
 }:
 let
-  src = import ./home-manager/sourcing.nix { };
-  programs = import ./home-manager/programs/main.nix { inherit inputs pkgs; };
+  conf_src = import ./config/sourcing.nix { };
+  extra_programs = import ./home-manager/main.nix { inherit inputs pkgs; };
 in
 {
   imports = [
     inputs.zen-browser.homeModules.twilight-official
     inputs.nixcord.homeModules.nixcord
     inputs.spicetify-nix.homeManagerModules.default
+    ./home-manager/portals.nix
   ];
 
   home = {
@@ -19,26 +20,7 @@ in
     homeDirectory = "/home/tsuki";
     stateVersion = "25.05";
   }
-  // src;
+  // conf_src;
 
-  xdg = {
-    configFile."xdg-desktop-portal/niri-portals.conf".text = ''
-      [preferred]
-      default=gtk
-      org.freedesktop.impl.portal.FileChooser=gtk
-      org.freedesktop.impl.portal.ScreenCast=gnome
-    '';
-    portal.config = {
-      enable = true;
-      extraPortals = [
-        pkgs.xdg-desktop-portal-gtk
-        pkgs.xdg-desktop-portal-wlr
-        pkgs.xdg-desktop-portal-gnome
-      ];
-      config.common.default = [ "gtk" ];
-      niri."org.freedesktop.impl.portal.FileChooser" = "gtk";
-    };
-  };
-
-  programs = programs;
+  programs = extra_programs;
 }

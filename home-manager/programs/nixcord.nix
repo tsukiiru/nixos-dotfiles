@@ -1,4 +1,4 @@
-{ }: {
+{ ... }: {
   enable = true;
   discord.equicord.enable = true;
 

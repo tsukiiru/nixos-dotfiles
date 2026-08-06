@@ -1,4 +1,4 @@
-{ }: {
+{ ... }: {
   enable = true;
   settings = {
     format = "$username$directory$git_branch$git_status$fill$lua$c$nodejs$rust$python\n[└─>](fg:green) ";
