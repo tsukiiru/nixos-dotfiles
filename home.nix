@@ -9,10 +9,10 @@ let
 in
 {
   imports = [
-    inputs.zen-browser.homeModules.twilight-official
     inputs.nixcord.homeModules.nixcord
     inputs.spicetify-nix.homeManagerModules.default
     ./home-manager/portals.nix
+    ./home-manager/programs/zen-browser.nix
   ];
 
   home = {

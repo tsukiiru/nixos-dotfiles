@@ -54,4 +54,8 @@
   ffmpeg
   yt-dlp
   vlc
+
+  # fun stuff
+  sqlite
+  chameleos
 ]

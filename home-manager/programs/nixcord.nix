@@ -80,7 +80,7 @@
         autoCompleteQuestTypes.PLAY_ON_DESKTOP = true;
       };
       soggy.enable = true;
-      betterGifLoad.enable = true;
+      #betterGifLoad.enable = true;
     };
   };
 
