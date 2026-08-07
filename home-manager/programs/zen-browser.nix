@@ -74,10 +74,11 @@ in
         #### pins ####
         # necessities folder
         "necessities" = {
-          id = "626dcf32-826a-42e4-8af9-5635e0ffc596";
+          id = "1786096061977-58";
           isGroup = true;
           editedTitle = true;
           position = 20;
+          workspace = "626dcf32-826a-42e4-8af9-5635e0ffc596";
 
           pins = {
             "cubic bezier generator" = {
@@ -127,9 +128,8 @@ in
 
       sine = {
         enable = true;
-        mods = [
-          "macaron"
-        ];
+        mods = [ ];
+        # install manually in sine store since it's quite buggy currently
       };
 
       # NOTE: add more search queries

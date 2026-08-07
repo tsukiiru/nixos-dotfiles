@@ -15,6 +15,8 @@ in
     ./home-manager/programs/zen-browser.nix
   ];
 
+  # TODO: use home-manager managed noctalia
+
   home = {
     username = "tsuki";
     homeDirectory = "/home/tsuki";
