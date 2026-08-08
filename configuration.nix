@@ -64,6 +64,7 @@ in
   };
 
   programs = {
+    niri.enable = true;
     fish.enable = true;
     steam = {
       enable = true;
