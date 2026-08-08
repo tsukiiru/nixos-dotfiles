@@ -114,6 +114,7 @@ in
         "zen.view.experimental-no-window-controls" = true;
         "zen.welcome-screen.seen" = true;
         "zen.urlbar.behavior" = "float";
+        "browser.ctrlTab.sortByRecentlyUsed" = true;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
 

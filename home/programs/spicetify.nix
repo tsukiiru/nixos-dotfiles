@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  spicePkgs = inputs.spicetify.legacyPackages.${pkgs.stdenv.hostPlatform.system};
   themePkg = spicePkgs.themes.text // {
     additionalCss = ''
       /* user settings */
@@ -35,18 +35,24 @@ let
 
 in
 {
-  enable = true;
-
-  enabledExtensions = with spicePkgs.extensions; [
-    adblock
-    shuffle
-    betterGenres
-  ];
-  enabledCustomApps = with spicePkgs.apps; [
-    betterLibrary
+  imports = [
+    inputs.spicetify.homeManagerModules.default
   ];
 
-  alwaysEnableDevTools = true;
-  theme = themePkg;
-  colorScheme = "RosePineDawn";
+  programs.spicetify = {
+    enable = true;
+
+    enabledExtensions = with spicePkgs.extensions; [
+      adblock
+      shuffle
+      betterGenres
+    ];
+    enabledCustomApps = with spicePkgs.apps; [
+      betterLibrary
+    ];
+
+    alwaysEnableDevTools = true;
+    theme = themePkg;
+    colorScheme = "RosePineDawn";
+  };
 }

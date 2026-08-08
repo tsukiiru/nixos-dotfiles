@@ -5,17 +5,16 @@
 }:
 let
   conf_src = import ./config/sourcing.nix { };
-  extra_programs = import ./home-manager/main.nix { inherit inputs pkgs; };
+  extra_programs = import ./home/main.nix { inherit inputs pkgs; };
 in
 {
   imports = [
-    inputs.nixcord.homeModules.nixcord
-    inputs.spicetify-nix.homeManagerModules.default
-    ./home-manager/portals.nix
-    ./home-manager/programs/zen-browser.nix
+    ./home/portals.nix
+    ./home/programs/zen-browser.nix
+    ./home/programs/nixcord.nix
+    ./home/programs/spicetify.nix
+    ./home/programs/noctalia.nix
   ];
-
-  # TODO: use home-manager managed noctalia
 
   home = {
     username = "tsuki";

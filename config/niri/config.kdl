@@ -50,24 +50,25 @@ layout {
     }
     shadow {
         on
-        softness 30
-        spread 8
+        softness 20
+        spread 4
         offset x=3 y=3
         color "#00000090"
         draw-behind-window true
     }
 }
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 16
     clip-to-geometry true
     draw-border-with-background false
 }
 spawn-at-startup "noctalia-shell"
+spawn-at-startup "chameleos" // annotation tool thing heh
 // spawn-at-startup "wlsunset" "-l" "21.0285" "-L" "105.8542" "-t" "4000" "-T" "4500"
 hotkey-overlay {
     skip-at-startup
 }
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d:%H-%M.png"
 animations {
     workspace-switch {
         duration-ms 280

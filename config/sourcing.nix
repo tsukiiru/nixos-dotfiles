@@ -5,6 +5,5 @@
     ".config/wezterm".source = ./wezterm;
     ".config/Wallpapers".source = ./Wallpapers;
     ".config/fastfetch".source = ./fastfetch;
-    ".config/noctalia".source = ./noctalia;
   };
 }
