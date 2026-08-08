@@ -29,6 +29,7 @@ in
       mTertiary = "#8b6e86";
     };
 
+    # i have no idea why non-official plugins need those id
     plugins = {
       autoUpdate = false;
       notifyUpdates = false;
@@ -53,7 +54,7 @@ in
           enabled = true;
           sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
         };
-        "bongo-cat" = {
+        "77d43d:bongo-cat" = {
           enabled = true;
           sourceUrl = "https://github.com/tsukiiru/noctalia-plugins";
         };
@@ -61,6 +62,7 @@ in
     };
 
     settings = {
+      settingsVersion = 59;
       bar = {
         barType = "floating";
         position = "bottom";
@@ -147,8 +149,7 @@ in
               useCustomFont = false;
             }
             {
-              defaultSettings = { };
-              id = "plugin:bongo-cat";
+              id = "plugin:77d43d:bongo-cat";
             }
           ];
           right = [
@@ -156,7 +157,7 @@ in
               defaultSettings = {
                 activeColor = "primary";
                 enableToast = true;
-                hideInactive = false;
+                hideInactive = true;
                 iconSpacing = 4;
                 inactiveColor = "none";
                 removeMargins = false;
@@ -231,7 +232,6 @@ in
         rightClickCommand = "";
         screenOverrides = [ ];
       };
-
       general = {
         avatarImage = "${homeDir}/.face";
         dimmerOpacity = 0.2;
@@ -264,7 +264,8 @@ in
         autoStartAuth = false;
         allowPasswordWithFprintd = false;
         clockStyle = "custom";
-        clockFormat = "hh\nmm";
+        clockFormat = "hh
+mm";
         passwordChars = false;
         lockScreenMonitors = [ ];
         lockScreenBlur = 0;
@@ -695,6 +696,10 @@ in
         startup = "";
         session = "";
         colorGeneration = "";
+      };
+      plugins = {
+        autoUpdate = false;
+        notifyUpdates = true;
       };
       idle = {
         enabled = false;
