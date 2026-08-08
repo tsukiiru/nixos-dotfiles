@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  imports = import ./home/imports.nix { } // [ ./home/portals.nix ];
+  imports = import ./home/imports.nix { } ++ [ ./home/portals.nix ];
 
   nixpkgs.config.allowUnfreePredicate =
     pkg:
