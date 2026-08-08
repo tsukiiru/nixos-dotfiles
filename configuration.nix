@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, lib, ... }:
 let
   sys_pkgs = import ./system_packages.nix pkgs;
   milk = pkgs.fetchFromGitHub {
@@ -15,6 +12,14 @@ in
   imports = [
     /etc/nixos/hardware-configuration.nix
   ];
+
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (lib.getName pkg) [
+      "aseprite"
+      "steam"
+      "steam-unwrapped"
+    ];
 
   console.font = "t850b";
 
@@ -59,7 +64,6 @@ in
   };
 
   programs = {
-    niri.enable = true;
     fish.enable = true;
     steam = {
       enable = true;
@@ -68,7 +72,7 @@ in
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
+  xdg.portal.enable = true;
 
   users = {
     users.tsuki = {

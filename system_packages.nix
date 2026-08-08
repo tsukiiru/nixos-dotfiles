@@ -22,18 +22,10 @@
   unzip
 
   # terminal
-  starship
   wezterm
 
   # networking
   wireguard-tools
-  ngrok
-
-  # wayland / portals
-  xwayland-satellite
-  xdg-desktop-portal-gnome
-  xdg-desktop-portal-gtk
-  xdg-desktop-portal-wlr
 
   # wine
   wineWow64Packages.stable

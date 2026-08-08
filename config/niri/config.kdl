@@ -4,7 +4,6 @@ input {
     }
     tablet {
         calibration-matrix 0.0 -1.0 1.0 1.0 0.0 0.0
- // rotate 90 degree clockwise since my tablet is shitting itself
     }
  // warp-mouse-to-focus
   // focus-follows-mouse max-scroll-amount="0%"

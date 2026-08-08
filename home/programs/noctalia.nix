@@ -9,8 +9,58 @@ in
 
   programs.noctalia-shell = {
     enable = true;
+
+    colors = {
+      mError = "#c27672";
+      mHover = "#c9cdd7";
+      mOnError = "#ffffff";
+      mOnHover = "#4f5357";
+      mOnPrimary = "#ffffff";
+      mOnSecondary = "#ffffff";
+      mOnSurface = "#4f5357";
+      mOnSurfaceVariant = "#666b70";
+      mOnTertiary = "#ffffff";
+      mOutline = "#8e8a80";
+      mPrimary = "#6b7f9f";
+      mSecondary = "#6f8795";
+      mShadow = "#c8c5bd";
+      mSurface = "#f2f1ec";
+      mSurfaceVariant = "#e4e1d8";
+      mTertiary = "#8b6e86";
+    };
+
+    plugins = {
+      autoUpdate = false;
+      notifyUpdates = false;
+      sources = [
+        {
+          enabled = true;
+          name = "official noctalia plugins";
+          url = "https://github.com/noctalia-dev/noctalia-plugins";
+        }
+        {
+          enabled = true;
+          name = "tsuki's noctalia plugins";
+          url = "https://github.com/tsukiiru/noctalia-plugins";
+        }
+      ];
+      states = {
+        "kaomoji-provider" = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        "privacy-indicator" = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        "bongo-cat" = {
+          enabled = true;
+          sourceUrl = "https://github.com/tsukiiru/noctalia-plugins";
+        };
+      };
+    };
+
     settings = {
-      settingsVersion = 59;
       bar = {
         barType = "floating";
         position = "bottom";
@@ -90,7 +140,7 @@ in
             {
               clockColor = "none";
               customFont = "Adwaita Mono";
-              formatHorizontal = "HH:mm\nddd, MMMM dd";
+              formatHorizontal = "HH:mm\\nddd, MMMM dd";
               formatVertical = "HH mm - dd MM";
               id = "Clock";
               tooltipFormat = "HH:mm ddd, MMM dd";
@@ -181,24 +231,7 @@ in
         rightClickCommand = "";
         screenOverrides = [ ];
       };
-      colors = {
-        mError = "#c27672";
-        mHover = "#c9cdd7";
-        mOnError = "#ffffff";
-        mOnHover = "#4f5357";
-        mOnPrimary = "#ffffff";
-        mOnSecondary = "#ffffff";
-        mOnSurface = "#4f5357";
-        mOnSurfaceVariant = "#666b70";
-        mOnTertiary = "#ffffff";
-        mOutline = "#8e8a80";
-        mPrimary = "#6b7f9f";
-        mSecondary = "#6f8795";
-        mShadow = "#c8c5bd";
-        mSurface = "#f2f1ec";
-        mSurfaceVariant = "#e4e1d8";
-        mTertiary = "#8b6e86";
-      };
+
       general = {
         avatarImage = "${homeDir}/.face";
         dimmerOpacity = 0.2;
@@ -662,37 +695,6 @@ in
         startup = "";
         session = "";
         colorGeneration = "";
-      };
-      plugins = {
-        autoUpdate = false;
-        notifyUpdates = false;
-        sources = [
-          {
-            enabled = true;
-            name = "official noctalia plugins";
-            url = "https://github.com/noctalia-dev/noctalia-plugins";
-          }
-          {
-            enabled = true;
-            name = "tsuki's noctalia plugins";
-            url = "https://github.com/tsukiiru/noctalia-plugins";
-          }
-        ];
-        states = {
-          "kaomoji-provider" = {
-            enabled = true;
-            sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-          };
-          "privacy-indicator" = {
-            enabled = true;
-            sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-          };
-          "bongo-cat" = {
-            enabled = true;
-            sourceUrl = "https://github.com/tsukiiru/noctalia-plugins";
-          };
-        };
-
       };
       idle = {
         enabled = false;
