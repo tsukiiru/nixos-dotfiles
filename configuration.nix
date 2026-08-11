@@ -64,6 +64,12 @@ in
   };
 
   programs = {
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        curl
+      ];
+    };
     niri.enable = true;
     fish.enable = true;
     steam = {

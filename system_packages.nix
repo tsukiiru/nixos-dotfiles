@@ -49,4 +49,5 @@
   # fun stuff
   sqlite
   chameleos
+  xwayland-satellite
 ]
