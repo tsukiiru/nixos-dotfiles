@@ -40,7 +40,7 @@
   imagemagick
   imv
   gimp
-  aseprite
+  # aseprite
   blender
   ffmpeg
   yt-dlp
