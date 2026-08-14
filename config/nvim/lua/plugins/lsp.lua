@@ -23,9 +23,11 @@ return {
 			local reg = require("mason-registry")
 			local to_install = {}
 
+      reg.refresh()
+
 			for pkg in pairs(packages) do
-				if reg.is_installed(pkg) and not reg.has_package(pkg) then
-					table.insert(to_install, i)
+				if reg.has_package(pkg) and not reg.is_installed(pkg) then
+					table.insert(to_install, pkg)
 				end
 			end
 

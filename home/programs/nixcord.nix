@@ -14,11 +14,11 @@
           
       :root,
       .theme-dark {
-        --window-tint: #0005;
-        --theme-background-image: url("https://github.com/tsukiiru/quickCSS-discord/blob/main/Girls-Last-Tour-3.webp?raw=true");
+        --window-tint: #0008;
+        --theme-background-image: url("https://github.com/tsukiiru/nixos-dotfiles/blob/master/config/Wallpapers/Nichijou.png?raw=true");
         --enable-blur: 1;
         --blur-strength: 6px;
-        --custom-app-top-bar-height: 12px;
+        --custom-app-top-bar-height: 0px;
       }
 
       body {
