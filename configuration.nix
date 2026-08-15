@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 let
   sys_pkgs = import ./system_packages.nix pkgs;
   milk = pkgs.fetchFromGitHub {
@@ -19,20 +24,23 @@ in
       "aseprite"
       "steam"
       "steam-unwrapped"
+      "nvidia-x11"
+      "nvidia-settings"
+      "nvidia-kernel-modules"
     ];
 
-  console.font = "t850b";
-
-  boot.loader = {
+  boot={
+kernelParams = ["video=1920x1080@60" "nvidia-drm.modeset=1"];
+  loader = {
     efi.canTouchEfiVariables = true;
     grub = {
       enable = true;
       efiSupport = true;
-      devices = ["nodev"];
+      devices = [ "nodev" ];
       useOSProber = true;
       theme = milk;
     };
-  };
+  };};
 
   networking = {
     hostName = "dreamland";
@@ -55,6 +63,7 @@ in
     };
     flatpak.enable = true;
     getty.autologinUser = "tsuki";
+    xserver.videoDrivers = [ "nvidia" ];
   };
 
   environment = {
@@ -85,14 +94,25 @@ in
   users = {
     users.tsuki = {
       isNormalUser = true;
-      extraGroups = [ "wheel" ];
+      extraGroups = [ "wheel" "video" "render" ];
     };
     defaultUserShell = pkgs.fish;
   };
 
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+
+    nvidia = {
+      modesetting.enable = true;
+      open = false;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      powerManagement.enable = false;
+      nvidiaSettings = true;
+    };
+
   };
 
   nix.settings.experimental-features = [

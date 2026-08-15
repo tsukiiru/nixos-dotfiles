@@ -10,6 +10,8 @@
   fd
   fastfetch
   fontconfig
+  wget
+  nodejs_22
 
   # tui
   btop
@@ -33,13 +35,14 @@
   libstrangle
 
   # graphics
-  intel-media-driver
-  vpl-gpu-rt
+  #intel-media-driver
+  #vpl-gpu-rt
 
   # media
   imagemagick
   imv
   gimp
+
   # aseprite
   blender
   ffmpeg
