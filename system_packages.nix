@@ -24,7 +24,8 @@
   unzip
 
   # terminal
-  wezterm
+  alacritty
+  tmux
 
   # networking
   wireguard-tools
@@ -51,6 +52,5 @@
 
   # fun stuff
   sqlite
-  chameleos
   xwayland-satellite
 ]

@@ -28,19 +28,24 @@ in
       "nvidia-settings"
       "nvidia-kernel-modules"
     ];
+  nixpkgs.config.nvidia.acceptLicense = true;
 
-  boot={
-kernelParams = ["video=1920x1080@60" "nvidia-drm.modeset=1"];
-  loader = {
-    efi.canTouchEfiVariables = true;
-    grub = {
-      enable = true;
-      efiSupport = true;
-      devices = [ "nodev" ];
-      useOSProber = true;
-      theme = milk;
+  boot = {
+    kernelParams = [
+      "nvidia-drm.modeset=1"
+      "nvidia-drm.fbdev=1"
+    ];
+    loader = {
+      efi.canTouchEfiVariables = true;
+      grub = {
+        enable = true;
+        efiSupport = true;
+        devices = [ "nodev" ];
+        useOSProber = true;
+        theme = milk;
+      };
     };
-  };};
+  };
 
   networking = {
     hostName = "dreamland";
@@ -81,6 +86,7 @@ kernelParams = ["video=1920x1080@60" "nvidia-drm.modeset=1"];
       ];
     };
     niri.enable = true;
+    hyprland.enable = true;
     fish.enable = true;
     steam = {
       enable = true;
@@ -94,7 +100,11 @@ kernelParams = ["video=1920x1080@60" "nvidia-drm.modeset=1"];
   users = {
     users.tsuki = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "video" "render" ];
+      extraGroups = [
+        "wheel"
+        "video"
+        "render"
+      ];
     };
     defaultUserShell = pkgs.fish;
   };
@@ -108,7 +118,7 @@ kernelParams = ["video=1920x1080@60" "nvidia-drm.modeset=1"];
     nvidia = {
       modesetting.enable = true;
       open = false;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.legacy_535;
       powerManagement.enable = false;
       nvidiaSettings = true;
     };

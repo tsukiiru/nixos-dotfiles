@@ -11,22 +11,22 @@ in
     enable = true;
 
     colors = {
-      mError = "#c27672";
-      mHover = "#c9cdd7";
-      mOnError = "#ffffff";
-      mOnHover = "#4f5357";
-      mOnPrimary = "#ffffff";
-      mOnSecondary = "#ffffff";
-      mOnSurface = "#4f5357";
-      mOnSurfaceVariant = "#666b70";
-      mOnTertiary = "#ffffff";
-      mOutline = "#8e8a80";
-      mPrimary = "#6b7f9f";
-      mSecondary = "#6f8795";
-      mShadow = "#c8c5bd";
-      mSurface = "#f2f1ec";
-      mSurfaceVariant = "#e4e1d8";
-      mTertiary = "#8b6e86";
+      mPrimary = "#c4b28a";
+      mOnPrimary = "#1F1F28";
+      mSecondary = "#8ea49e";
+      mOnSecondary = "#1F1F28";
+      mTertiary = "#938AA9";
+      mOnTertiary = "#1F1F28";
+      mError = "#c4746e";
+      mOnError = "#1F1F28";
+      mSurface = "#1F1F28";
+      mOnSurface = "#DCD7BA";
+      mSurfaceVariant = "#2A2A37";
+      mOnSurfaceVariant = "#C8C093";
+      mOutline = "#435965";
+      mShadow = "#000000";
+      mHover = "#363646";
+      mOnHover = "#DCD7BA";
     };
 
     # i have no idea why non-official plugins need those id
@@ -298,8 +298,8 @@ mm";
         smoothScrollEnabled = true;
       };
       ui = {
-        fontDefault = "AnnotationMono";
-        fontFixed = "AnnotationMono";
+        fontDefault = "Monofur Nerd Font";
+        fontFixed = "Monofur Nerd Font";
         fontDefaultScale = 0.92;
         fontFixedScale = 0.9;
         tooltipsEnabled = true;
@@ -663,8 +663,8 @@ mm";
       };
       colorSchemes = {
         useWallpaperColors = false;
-        predefinedScheme = "Kanagawa Paper";
-        darkMode = false;
+        predefinedScheme = "";
+        darkMode = true;
         schedulingMode = "off";
         manualSunrise = "06:30";
         manualSunset = "18:30";
@@ -677,7 +677,7 @@ mm";
         enableUserTheming = false;
       };
       nightLight = {
-        enabled = true;
+        enabled = false;
         forced = false;
         autoSchedule = true;
         nightTemp = "2085";

@@ -4,6 +4,6 @@ return {
 	priority = 1000,
 
 	config = function()
-		vim.cmd.colorscheme("kanagawa-paper-canvas")
+		vim.cmd.colorscheme("kanagawa-paper-ink")
 	end,
 }

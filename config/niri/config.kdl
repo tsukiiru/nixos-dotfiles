@@ -20,13 +20,11 @@ output "eDP-1" {
     scale 1
     transform "normal"
 }
-
 output "HP Inc. HP Z24f G3 CN411827S5" {
     mode "1920x1080@60"
     scale 1
     transform "normal"
 }
-
 overview {
     workspace-shadow {
         off
@@ -73,8 +71,8 @@ window-rule {
     draw-border-with-background false
 }
 spawn-at-startup "noctalia-shell"
-spawn-at-startup "chameleos" // annotation tool thing heh
-// spawn-at-startup "wlsunset" "-l" "21.0285" "-L" "105.8542" "-t" "4000" "-T" "4500"
+spawn-at-startup "chameleos"
+// annotation tool thing heh// spawn-at-startup "wlsunset" "-l" "21.0285" "-L" "105.8542" "-t" "4000" "-T" "4500"
 hotkey-overlay {
     skip-at-startup
 }
@@ -143,15 +141,14 @@ binds {
         spawn-sh "pkill fcitx5 || fcitx5"
     }
     Mod+Return {
-        spawn "wezterm"
+        spawn "alacritty"
     }
     Mod+Space {
         spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"
     }
-    /*
     Mod+E {
-    spawn "wezterm -e yazi"
-    }*/
+        spawn "alacritty" "-e" "yazi"
+    }
     Mod+W {
         spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"
     }
