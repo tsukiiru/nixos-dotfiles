@@ -86,7 +86,6 @@ in
       ];
     };
     niri.enable = true;
-    hyprland.enable = true;
     fish.enable = true;
     steam = {
       enable = true;
