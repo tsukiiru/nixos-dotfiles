@@ -3,8 +3,12 @@
     enable = true;
 
     interactiveShellInit = ''
-      if not set -q TMUX
-        exec tmux new-session -A -s main 
+      if status is-login;
+        if string match -qr '^/dev/pts'
+          if not set -q TMUX
+            exec tmux new-session -A -s main 
+          end
+        end
       end
 
       set fish_greeting ""
