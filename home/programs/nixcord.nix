@@ -14,7 +14,7 @@
           
       :root,
       .theme-dark {
-        --window-tint: #0008;
+        --window-tint: #000000ad;
         --theme-background-image: url("https://github.com/tsukiiru/nixos-dotfiles/blob/master/config/Wallpapers/Nichijou.png?raw=true");
         --enable-blur: 1;
         --blur-strength: 6px;

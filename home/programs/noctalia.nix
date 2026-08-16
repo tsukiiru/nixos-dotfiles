@@ -300,8 +300,8 @@ mm";
       ui = {
         fontDefault = "Monofur Nerd Font";
         fontFixed = "Monofur Nerd Font";
-        fontDefaultScale = 0.92;
-        fontFixedScale = 0.9;
+        fontDefaultScale = 1.0;
+        fontFixedScale = 1.0;
         tooltipsEnabled = true;
         scrollbarAlwaysVisible = false;
         boxBorderEnabled = false;

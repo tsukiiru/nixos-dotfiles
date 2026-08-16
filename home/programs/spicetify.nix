@@ -53,6 +53,6 @@ in
 
     alwaysEnableDevTools = true;
     theme = themePkg;
-    colorScheme = "RosePineDawn";
+    colorScheme = "Kanagawa";
   };
 }

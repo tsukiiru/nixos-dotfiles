@@ -3,6 +3,10 @@
     enable = true;
 
     interactiveShellInit = ''
+      if not set -q TMUX
+        exec tmux new-session -A -s main 
+      end
+
       set fish_greeting ""
       starship init fish | source
     '';
