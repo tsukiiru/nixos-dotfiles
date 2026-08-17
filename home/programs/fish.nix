@@ -3,11 +3,9 @@
     enable = true;
 
     interactiveShellInit = ''
-      if status is-login;
-        if string match -qr '^/dev/pts'
-          if not set -q TMUX
-            exec tmux new-session -A -s main 
-          end
+      if string match -qr '^/dev/pts' -- (tty);
+        if not set -q TMUX
+          exec tmux new-session -A -s main 
         end
       end
 

@@ -101,6 +101,17 @@ in
     };
   };
 
+  i18n.inputMethod = {
+    type = "fcitx5";
+    enable = true;
+    fcitx5.addons = with pkgs; [
+      qt6Packages.fcitx5-configtool
+      fcitx5-nord
+      qt6Packages.fcitx5-unikey
+      fcitx5-bamboo
+    ];
+  };
+
   xdg.portal.enable = true;
 
   users = {
