@@ -23,9 +23,9 @@
 
       body {
         letter-spacing: -0.1ch;
-        --font-primary: "Annotation Mono";
-        --font-display: "Annotation Mono";
-        --font-code: "Annotation Mono";
+        --font-primary: "Monofur Nerd Font";
+        --font-display: "Monofur Nerd Font";
+        --font-code: "Monofur Nerd Font";
       }
     '';
 
@@ -85,7 +85,6 @@
           autoCompleteQuestTypes.PLAY_ON_DESKTOP = true;
         };
         soggy.enable = true;
-        #betterGifLoad.enable = true;
       };
     };
   };

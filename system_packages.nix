@@ -35,10 +35,6 @@
   winetricks
   libstrangle
 
-  # graphics
-  #intel-media-driver
-  #vpl-gpu-rt
-
   # media
   imagemagick
   imv
@@ -50,7 +46,11 @@
   yt-dlp
   vlc
 
+  # fonts
+  nerdfonts.monofur
+
   # fun stuff
   sqlite
   xwayland-satellite
+
 ]
