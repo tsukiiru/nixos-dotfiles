@@ -47,7 +47,7 @@
   vlc
 
   # fonts
-  nerdfonts.monofur
+  nerd-fonts.monofur
 
   # fun stuff
   sqlite
