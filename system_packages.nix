@@ -12,7 +12,6 @@
   fontconfig
   wget
   nodejs_22
-  libnotify
 
   # tui
   btop
@@ -45,8 +44,6 @@
   ffmpeg
   yt-dlp
   vlc
-  slurp
-  wf-recorder
 
   # fonts
   nerd-fonts.monofur
