@@ -71,12 +71,11 @@ window-rule {
     draw-border-with-background false
 }
 spawn-at-startup "noctalia-shell"
-spawn-at-startup "chameleos"
-// annotation tool thing heh// spawn-at-startup "wlsunset" "-l" "21.0285" "-L" "105.8542" "-t" "4000" "-T" "4500"
+// spawn-at-startup "wlsunset" "-l" "21.0285" "-L" "105.8542" "-t" "4000" "-T" "4500"
 hotkey-overlay {
     skip-at-startup
 }
-screenshot-path "~/Pictures/Screenshots/%Y-%m-%d:%H-%M.png"
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d:%H-%M.avif"
 animations {
     workspace-switch {
         duration-ms 280
@@ -161,9 +160,9 @@ binds {
     Mod+G {
         spawn "noctalia-shell" "ipc" "call" "wallpaper" "toggle"
     }
-    /*    Mod+R {
-    spawn "recorder.sh"
-    }*/
+    Mod+R {
+        spawn "recorder.sh"
+    }
     Mod+O repeat=false {
         toggle-overview
     }

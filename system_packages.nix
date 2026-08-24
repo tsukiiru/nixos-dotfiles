@@ -12,6 +12,7 @@
   fontconfig
   wget
   nodejs_22
+  libnotify
 
   # tui
   btop
@@ -39,12 +40,13 @@
   imagemagick
   imv
   gimp
-
-  # aseprite
+  #aseprite
   blender
   ffmpeg
   yt-dlp
   vlc
+  slurp
+  wf-recorder
 
   # fonts
   nerd-fonts.monofur
@@ -52,5 +54,4 @@
   # fun stuff
   sqlite
   xwayland-satellite
-
 ]
