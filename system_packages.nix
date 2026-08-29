@@ -11,6 +11,7 @@
   fastfetch
   fontconfig
   wget
+  jq
   nodejs_22
 
   # tui
@@ -51,4 +52,5 @@
   # fun stuff
   sqlite
   xwayland-satellite
+  goog
 ]

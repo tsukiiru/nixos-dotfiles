@@ -27,16 +27,21 @@
       url = "github:noctalia-dev/noctalia/legacy-v4";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #niri = {
-    #  url = "github:sodiboo/niri-flake";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    /*
+      niri = {
+        url = "github:epireyn/niri-flake";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
+    */
+    goog.url = "github:tsukiiru/goog";
   };
 
   outputs =
     inputs@{
+      self,
       nixpkgs,
       home-manager,
+      goog,
       ...
     }:
     let
@@ -46,6 +51,9 @@
       nixosConfigurations.flake-btw = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
+          {
+            nixpkgs.overlays = [ goog.overlays.default ];
+          }
           ./configuration.nix
           home-manager.nixosModules.home-manager
           {

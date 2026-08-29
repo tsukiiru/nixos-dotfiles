@@ -11,7 +11,7 @@
       @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/solar.css");
       @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/moreicons.css");
       @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/file.css");
-          
+
       :root,
       .theme-dark {
         --window-tint: #000000ad;

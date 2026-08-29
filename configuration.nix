@@ -129,7 +129,6 @@ in
         "render"
       ];
     };
-    # defaultUserShell = pkgs.fish;
   };
 
   hardware = {

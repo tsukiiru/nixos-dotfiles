@@ -5,7 +5,7 @@
     interactiveShellInit = ''
       if string match -qr '^/dev/pts' -- (tty);
         if not set -q TMUX
-          exec tmux new-session -A -s main 
+          exec tmux new-session -A -s main
         end
       end
 
