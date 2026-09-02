@@ -53,4 +53,5 @@
   sqlite
   xwayland-satellite
   goog
+  libnotify
 ]

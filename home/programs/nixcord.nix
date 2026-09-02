@@ -8,25 +8,7 @@
     discord.equicord.enable = true;
 
     quickCss = ''
-      @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/solar.css");
-      @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/moreicons.css");
       @import url("https://raw.githubusercontent.com/tsukiiru/quickCSS-discord/refs/heads/main/file.css");
-
-      :root,
-      .theme-dark {
-        --window-tint: #000000ad;
-        --theme-background-image: url("https://github.com/tsukiiru/nixos-dotfiles/blob/master/config/Wallpapers/Nichijou.png?raw=true");
-        --enable-blur: 1;
-        --blur-strength: 6px;
-        --custom-app-top-bar-height: 0px;
-      }
-
-      body {
-        letter-spacing: -0.1ch;
-        --font-primary: "Monofur Nerd Font";
-        --font-display: "Monofur Nerd Font";
-        --font-code: "Monofur Nerd Font";
-      }
     '';
 
     config = {
@@ -56,7 +38,6 @@
         reviewDb.enable = true;
         serverInfo.enable = true;
         shikiCodeblocks.enable = true;
-        showConnections.enable = true;
         showHiddenChannels.enable = true;
         showTimeoutDuration.enable = true;
         silentTyping.enable = true;
@@ -72,6 +53,7 @@
           removeNameplate = false;
           removeProfileEffect = false;
           removeClanTag = false;
+          removeProfileFrame = false;
         };
         fixFileExtensions.enable = true;
         fullVcpfp.enable = true;
@@ -83,8 +65,12 @@
         questify = {
           enable = true;
           autoCompleteQuestTypes.PLAY_ON_DESKTOP = true;
+          questButtonDisplay = "never";
         };
-        soggy.enable = true;
+        noRoleHeaders.enable = true;
+        usrbg.enable = true;
+        fakeNitro.enable = true;
+        experiments.enable = true;
       };
     };
   };
