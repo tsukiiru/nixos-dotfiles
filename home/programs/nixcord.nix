@@ -71,6 +71,7 @@
         usrbg.enable = true;
         fakeNitro.enable = true;
         experiments.enable = true;
+        platformIndicators.enable = true;
       };
     };
   };
