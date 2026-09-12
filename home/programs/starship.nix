@@ -48,7 +48,7 @@
         use_12hr = true;
       };
       username = {
-        format = "[󰄛 $user]($style) [✦](fg:gray_3)";
+        format = "[󰽥 $user]($style) [✦](fg:gray_3)";
         show_always = true;
         style_root = "fg:red bold";
         style_user = "fg:pink bold";
