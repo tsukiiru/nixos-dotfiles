@@ -6,24 +6,18 @@ return {
 
 			--- packages to install automatically
 			local packages = {
-				-- lsp
-				"css-lsp",
-				"html-lsp",
-				"json-lsp",
-				"typescript-language-server",
 				"nil",
-				-- fmt
 				"prettier",
 				"nixfmt",
 				"kdlfmt",
 				"stylua",
-				-- both
-				"rust-analyzer",
+				"biome",
+				"taplo",
 			}
 			local reg = require("mason-registry")
 			local to_install = {}
 
-      reg.refresh()
+			reg.refresh()
 
 			for pkg in pairs(packages) do
 				if reg.has_package(pkg) and not reg.is_installed(pkg) then

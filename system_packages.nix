@@ -13,6 +13,7 @@
   wget
   jq
   nodejs_22
+  croc
 
   # tui
   btop
@@ -45,6 +46,7 @@
   ffmpeg
   yt-dlp
   vlc
+  zathura
 
   # fonts
   nerd-fonts.monofur
@@ -53,5 +55,5 @@
   sqlite
   xwayland-satellite
   goog
-  libnotify
+  fuzzel
 ]
