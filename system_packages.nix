@@ -48,12 +48,16 @@
   vlc
   zathura
 
+  # study
+  anki
+
   # fonts
   nerd-fonts.monofur
 
   # fun stuff
   sqlite
   xwayland-satellite
-  goog
+  goog # goog...
   fuzzel
+  cbonsai # tree!!!
 ]
