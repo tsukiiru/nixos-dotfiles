@@ -1,6 +1,6 @@
 return {
 	"folke/which-key.nvim",
-
+	--[[
 	{
 		"vyfor/cord.nvim",
 
@@ -11,4 +11,5 @@ return {
 			},
 		},
 	},
+  ]]
 }

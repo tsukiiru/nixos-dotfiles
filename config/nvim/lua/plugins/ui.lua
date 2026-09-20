@@ -1,39 +1,9 @@
 return {
 	--- animations
-	{ "sphamba/smear-cursor.nvim", opts = {} },
-	{
-		"karb94/neoscroll.nvim",
-		opts = {
-			mappings = {
-				"<C-u>",
-				"<C-d>",
-				"<C-b>",
-				"<C-f>",
-				"<C-y>",
-				"<C-e>",
-				"zt",
-				"zz",
-				"zb",
-			},
-			hide_cursor = true,
-		},
-	},
-	{
-		"rachartier/tiny-glimmer.nvim",
-		opts = {
-			enabled = true,
-			disable_warnings = true,
-			autoreload = true,
-			overwrite = {
-				search = {
-					enabled = true,
-				},
-				undo = {
-					enabled = true,
-				},
-			},
-		},
-	},
+	{ "sphamba/smear-cursor.nvim", opts = {
+		cursor_color = "none",
+		hide_target_hack = true,
+	} },
 
 	-- dashboard
 	{
@@ -95,7 +65,7 @@ return {
 			vim.api.nvim_set_hl(0, "shortcut_4", { fg = "#c4a7e7" })
 		end,
 	},
-	--[[
+
 	{
 		"folke/snacks.nvim",
 		lazy = false,
@@ -105,6 +75,16 @@ return {
 	},
 
 	{
+		"rcarriga/nvim-notify",
+		event = "VeryLazy",
+		opts = {
+			background_colour = "None",
+			stages = "slide",
+		},
+	},
+
+	{
+
 		"folke/noice.nvim",
 		event = "VeryLazy",
 		dependencies = {
@@ -139,8 +119,7 @@ return {
 				long_message_to_split = true,
 			},
 		},
-
-	},]]
+	},
 
 	-- cool looking bar
 	{
@@ -176,6 +155,11 @@ return {
 					hide = {
 						statusline = false,
 					},
+				},
+				extensions = {
+					"nvim-tree",
+					"trouble",
+					"lazy",
 				},
 				sections = {
 					lualine_a = {
@@ -237,7 +221,18 @@ return {
 					lualine_z = { "" },
 				},
 			})
+
+			local highlights =
+				{ "StatusLine", "StatusLineNC", "TabLine", "TabLineFill", "TabLineSel", "WinBar", "WinBarNC" }
+			for _, hl in pairs(highlights) do
+				vim.api.nvim_set_hl(0, hl, { bg = "none" })
+			end
 		end,
+	},
+
+	{
+		"j-hui/fidget.nvim",
+		opts = {},
 	},
 
 	-- telescope
@@ -282,6 +277,170 @@ return {
 
 			vim.api.nvim_set_hl(0, "NvimTreeFolderName", { bold = true })
 			vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { bold = true })
+		end,
+	},
+
+	{
+		"nvim-mini/mini.icons",
+		lazy = true,
+		opts = {
+			file = {
+				[".keep"] = { glyph = "󰊢", hl = "MiniIconsGrey" },
+				["devcontainer.json"] = { glyph = "", hl = "MiniIconsAzure" },
+			},
+			filetype = {
+				dotenv = { glyph = "", hl = "MiniIconsYellow" },
+			},
+		},
+		init = function()
+			package.preload["nvim-web-devicons"] = function()
+				require("mini.icons").mock_nvim_web_devicons()
+				return package.loaded["nvim-web-devicons"]
+			end
+		end,
+	},
+
+	{
+		"nvim-mini/mini.indentscope",
+		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+		version = false, -- wait till new 0.7.0 release to put it back on semver
+		opts = {
+			-- symbol = "▏",
+			symbol = "│",
+			options = { try_as_border = true },
+		},
+		init = function()
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = {
+					"Trouble",
+					"alpha",
+					"dashboard",
+					"fzf",
+					"help",
+					"lazy",
+					"mason",
+					"neo-tree",
+					"notify",
+					"sidekick_terminal",
+					"snacks_dashboard",
+					"snacks_notif",
+					"snacks_terminal",
+					"snacks_win",
+					"toggleterm",
+					"trouble",
+				},
+				callback = function()
+					vim.b.miniindentscope_disable = true
+				end,
+			})
+
+			vim.api.nvim_create_autocmd("User", {
+				pattern = "SnacksDashboardOpened",
+				callback = function(data)
+					vim.b[data.buf].miniindentscope_disable = true
+				end,
+			})
+		end,
+	},
+
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+		opts = function()
+			Snacks.toggle({
+				name = "Indention Guides",
+				get = function()
+					return require("ibl.config").get_config(0).enabled
+				end,
+				set = function(state)
+					require("ibl").setup_buffer(0, { enabled = state })
+				end,
+			}):map("<leader>ug")
+
+			return {
+				indent = {
+					char = "│",
+					tab_char = "│",
+				},
+				scope = { show_start = false, show_end = false, enabled = false },
+				exclude = {
+					filetypes = {
+						"Trouble",
+						"alpha",
+						"dashboard",
+						"help",
+						"lazy",
+						"mason",
+						"neo-tree",
+						"notify",
+						"snacks_dashboard",
+						"snacks_notif",
+						"snacks_terminal",
+						"snacks_win",
+						"toggleterm",
+						"trouble",
+					},
+				},
+			}
+		end,
+		main = "ibl",
+	},
+
+	{
+		"nvim-mini/mini.animate",
+		event = "VeryLazy",
+		cond = vim.g.neovide == nil,
+		opts = function(_, opts)
+			-- don't use animate when scrolling with the mouse
+			local mouse_scrolled = false
+			for _, scroll in ipairs({ "Up", "Down" }) do
+				local key = "<ScrollWheel" .. scroll .. ">"
+				vim.keymap.set({ "", "i" }, key, function()
+					mouse_scrolled = true
+					return key
+				end, { expr = true })
+			end
+
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "grug-far",
+				callback = function()
+					vim.b.minianimate_disable = true
+				end,
+			})
+			cursor =
+				{ enable = false },
+				-- schedule setting the mapping to override the default mapping from `keymaps.lua`
+				-- seems `keymaps.lua` is the last event to execute on `VeryLazy` and it overwrites it
+				vim.schedule(function()
+					Snacks.toggle({
+						name = "Mini Animate",
+						get = function()
+							return not vim.g.minianimate_disable
+						end,
+						set = function(state)
+							vim.g.minianimate_disable = not state
+						end,
+					}):map("<leader>ua")
+				end)
+
+			local animate = require("mini.animate")
+			return vim.tbl_deep_extend("force", opts, {
+				resize = {
+					timing = animate.gen_timing.linear({ duration = 50, unit = "total" }),
+				},
+				scroll = {
+					timing = animate.gen_timing.linear({ duration = 150, unit = "total" }),
+					subscroll = animate.gen_subscroll.equal({
+						predicate = function(total_scroll)
+							if mouse_scrolled then
+								mouse_scrolled = false
+								return false
+							end
+							return total_scroll > 1
+						end,
+					}),
+				},
+			})
 		end,
 	},
 }

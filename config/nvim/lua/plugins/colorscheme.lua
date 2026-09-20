@@ -1,9 +1,12 @@
 return {
-	"thesimonho/kanagawa-paper.nvim",
+	"tiagovla/tokyodark.nvim",
 	lazy = false,
 	priority = 1000,
 
 	config = function()
-		vim.cmd.colorscheme("kanagawa-paper-ink")
+		require("tokyodark").setup({
+			transparent_background = true,
+		})
+		vim.cmd.colorscheme("tokyodark")
 	end,
 }

@@ -5,4 +5,5 @@
   ./programs/noctalia.nix
   ./programs/fish.nix
   ./programs/starship.nix
+  ./programs/fuzzel.nix
 ]

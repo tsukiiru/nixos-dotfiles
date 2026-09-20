@@ -37,7 +37,7 @@ cursor {
 }
 prefer-no-csd
 layout {
-    gaps 16
+    gaps 12
     center-focused-column "never"
     default-column-width {
         proportion 0.5
@@ -69,6 +69,15 @@ window-rule {
     geometry-corner-radius 16
     clip-to-geometry true
     draw-border-with-background false
+    background-effect {
+        blur true
+    }
+}
+blur {
+    passes 1
+    offset 3
+    noise 0
+    saturation 1.0
 }
 spawn-at-startup "noctalia-shell"
 // spawn-at-startup "wlsunset" "-l" "21.0285" "-L" "105.8542" "-t" "4000" "-T" "4500"

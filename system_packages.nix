@@ -60,4 +60,5 @@
   goog # goog...
   fuzzel
   cbonsai # tree!!!
+  evtest
 ]

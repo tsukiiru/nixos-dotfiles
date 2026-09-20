@@ -127,6 +127,7 @@ in
         "wheel"
         "video"
         "render"
+        "input"
       ];
     };
   };

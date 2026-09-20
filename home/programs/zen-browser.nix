@@ -41,7 +41,7 @@ in
       spacesForce = true;
 
       spaces = {
-        "stuff :3" = {
+        "いろいろ :3" = {
           id = "626dcf32-826a-42e4-8af9-5635e0ffc596";
           position = 1000;
           icon = "chrome://browser/skin/zen-icons/selectable/moon.svg";
@@ -70,10 +70,15 @@ in
           id = "b7d508a3-9e15-46ed-a27f-476f3512a6af";
           isEssential = true;
         };
+        "youtube" = {
+          url = "https://youtube.com";
+          position = 13;
+          id = "a34d0539-8ad7-47ad-a247-92115bab8122";
+          isEssential = true;
+        };
 
         #### pins ####
-        # necessities folder
-        "necessities" = {
+        "道具" = {
           id = "1786096061977-58";
           isGroup = true;
           editedTitle = true;
@@ -106,6 +111,27 @@ in
               url = "https://figma.com";
               position = 25;
             };
+            "uuid generator" = {
+              id = "629b1e2a-5fe3-44bd-9440-f8d45d9ef0c8";
+              url = "https://www.uuidgenerator.net/version4";
+              position = 26;
+            };
+          };
+        };
+
+        "日本語" = {
+          id = "1786096061977-59";
+          isGroup = true;
+          editedTitle = true;
+          position = 30;
+          workspace = "626dcf32-826a-42e4-8af9-5635e0ffc596";
+
+          pins = {
+            "yokubi" = {
+              id = "52700f94-2d61-4c89-815b-c71f8a738a1b";
+              url = "https://yoku.bi";
+              position = 31;
+            }
           };
         };
       };
@@ -116,6 +142,8 @@ in
         "zen.urlbar.behavior" = "float";
         "browser.ctrlTab.sortByRecentlyUsed" = true;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "zen.widget.linux.transparency" = true;
+        "browser.tabs.allow_transparent_browser" = true;
       };
 
       presets.betterfox.enable = true;
@@ -124,6 +152,7 @@ in
         packages = with firefox-addons; [
           ublock-origin
           proton-pass
+          yomitan
         ];
       };
 

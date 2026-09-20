@@ -1,9 +1,10 @@
 [general]
-import = ["kanagawa-paper-ink.toml"]
+import = ["tokyo-dark.toml"]
 
 [window]
 decorations = "None"
-padding = { x = 2, y = 0 }
+opacity = 0.5
+padding = { x = 10, y = 10 }
 
 [font]
 normal = { family = "Monofur Nerd Font", style = "Regular" }
