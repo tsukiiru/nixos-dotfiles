@@ -3,12 +3,6 @@
     enable = true;
 
     interactiveShellInit = ''
-      if string match -qr '^/dev/pts' -- (tty);
-        if not set -q TMUX
-          exec tmux new-session -A -s main
-        end
-      end
-
       set fish_greeting ""
       starship init fish | source
     '';

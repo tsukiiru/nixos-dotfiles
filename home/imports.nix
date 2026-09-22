@@ -6,4 +6,5 @@
   ./programs/fish.nix
   ./programs/starship.nix
   ./programs/fuzzel.nix
+  ./programs/fcitx5.nix
 ]

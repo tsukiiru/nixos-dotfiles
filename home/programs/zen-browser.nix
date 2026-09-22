@@ -131,7 +131,7 @@ in
               id = "52700f94-2d61-4c89-815b-c71f8a738a1b";
               url = "https://yoku.bi";
               position = 31;
-            }
+            };
           };
         };
       };

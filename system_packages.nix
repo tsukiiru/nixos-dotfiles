@@ -61,4 +61,5 @@
   fuzzel
   cbonsai # tree!!!
   evtest
+  cinny-desktop
 ]

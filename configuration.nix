@@ -112,9 +112,10 @@ in
     enable = true;
     fcitx5.addons = with pkgs; [
       qt6Packages.fcitx5-configtool
-      fcitx5-nord
       qt6Packages.fcitx5-unikey
       fcitx5-bamboo
+      fcitx5-mozc
+      fcitx5-tokyonight
     ];
   };
 

@@ -5,7 +5,7 @@ let
     additionalCss = ''
       /* user settings */
       :root {
-          --font-family: "Annotation Mono", monospace;
+          --font-family: "Monofur Nerd Font", monospace;
           --font-size: 14px;
           --font-weight: 400; /* 200 : 900 */
           --line-height: 1.2;
@@ -53,6 +53,6 @@ in
 
     alwaysEnableDevTools = true;
     theme = themePkg;
-    colorScheme = "Kanagawa";
+    colorScheme = "TokyoNight";
   };
 }
