@@ -1,5 +1,5 @@
 [general]
-import = ["tokyo-dark.toml"]
+import = ["rose-pine.toml"]
 
 [window]
 decorations = "None"

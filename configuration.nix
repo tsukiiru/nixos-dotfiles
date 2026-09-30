@@ -48,7 +48,7 @@ in
   };
 
   networking = {
-    hostName = "chiffy-time";
+    hostName = "izumi";
     nameservers = [
       "1.1.1.1"
       "9.9.9.9"

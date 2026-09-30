@@ -41,12 +41,14 @@
   imagemagick
   imv
   gimp
-  #aseprite
+  aseprite
   blender
+  blockbench
   ffmpeg
   yt-dlp
   vlc
   zathura
+  spotify-player
 
   # study
   anki

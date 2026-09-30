@@ -490,7 +490,7 @@ mm";
         disableWallpaper = false;
       };
       notifications = {
-        backgroundOpacity = 1;
+        backgroundOpacity = 0.5;
         clearDismissed = true;
         criticalUrgencyDuration = 15;
         density = "default";
@@ -522,7 +522,7 @@ mm";
       };
       osd = {
         autoHideMs = 800;
-        backgroundOpacity = 1;
+        backgroundOpacity = 0.5;
         enabled = true;
         enabledTypes = [
           2
@@ -637,7 +637,7 @@ mm";
         fontDefaultScale = 1;
         fontFixed = "Monofur Nerd Font Mono";
         fontFixedScale = 1;
-        panelBackgroundOpacity = 0.39;
+        panelBackgroundOpacity = 0.4;
         panelsAttachedToBar = true;
         scrollbarAlwaysVisible = false;
         settingsPanelMode = "centered";

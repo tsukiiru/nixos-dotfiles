@@ -72,6 +72,7 @@
         fakeNitro.enable = true;
         experiments.enable = true;
         platformIndicators.enable = true;
+        unlockedAvatarZoom.enable = true;
       };
     };
   };

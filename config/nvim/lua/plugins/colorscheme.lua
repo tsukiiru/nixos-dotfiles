@@ -1,12 +1,15 @@
 return {
-	"tiagovla/tokyodark.nvim",
+	"rose-pine/neovim",
 	lazy = false,
 	priority = 1000,
 
 	config = function()
-		require("tokyodark").setup({
-			transparent_background = true,
+		require("rose-pine").setup({
+			styles = {
+				transparency = true,
+			},
+			dim_inactive_windows = false,
 		})
-		vim.cmd.colorscheme("tokyodark")
+		vim.cmd.colorscheme("rose-pine")
 	end,
 }
