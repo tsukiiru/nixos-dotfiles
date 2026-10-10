@@ -48,7 +48,6 @@
   yt-dlp
   vlc
   zathura
-  spotify-player
 
   # study
   anki
@@ -60,6 +59,7 @@
   sqlite
   xwayland-satellite
   goog # goog...
+  buoyant
   fuzzel
   cbonsai # tree!!!
   evtest

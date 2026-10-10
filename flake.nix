@@ -36,6 +36,7 @@
       };
     */
     goog.url = "github:tsukiiru/goog";
+    buoyant.url = "github:tsukiiru/buoyant";
   };
 
   outputs =
@@ -44,6 +45,7 @@
       nixpkgs,
       home-manager,
       goog,
+      buoyant,
       ...
     }:
     let
@@ -54,7 +56,10 @@
         inherit system;
         modules = [
           {
-            nixpkgs.overlays = [ goog.overlays.default ];
+            nixpkgs.overlays = [
+              goog.overlays.default
+              buoyant.overlays.default
+            ];
           }
           ./configuration.nix
           home-manager.nixosModules.home-manager
