@@ -7,54 +7,55 @@ in
     inputs.noctalia.homeModules.default
   ];
 
-  programs.noctalia-shell = {
+  programs.noctalia = {
     enable = true;
 
-    colors = {
-      mError = "#cc6666";
-      mHover = "#8abeb7";
-      mOnError = "#1d1f21";
-      mOnHover = "#1d1f21";
-      mOnPrimary = "#1d1f21";
-      mOnSecondary = "#1d1f21";
-      mOnSurface = "#c5c8c6";
-      mOnSurfaceVariant = "#969896";
-      mOnTertiary = "#1d1f21";
-      mOutline = "#373b41";
-      mPrimary = "#81a2be";
-      mSecondary = "#b294bb";
-      mShadow = "#1d1f21";
-      mSurface = "#1d1f21";
-      mSurfaceVariant = "#282a2e";
-      mTertiary = "#de935f";
-    };
+    #colors = {
+     # mError = "#cc6666";
+      #mHover = "#8abeb7";
+      #mOnError = "#1d1f21";
+ #     mOnHover = "#1d1f21";
+ #     mOnPrimary = "#1d1f21";
+ #     mOnSecondary = "#1d1f21";
+  #    mOnSurface = "#c5c8c6";
+ #     mOnSurfaceVariant = "#969896";
+  #    mOnTertiary = "#1d1f21";
+   #   mOutline = "#373b41";
+    #  mPrimary = "#81a2be";
+     # mSecondary = "#b294bb";
+     # mShadow = "#1d1f21";
+      #mSurface = "#1d1f21";
+    #  mSurfaceVariant = "#282a2e";
+    #  mTertiary = "#de935f";
+   # };
 
     # i have no idea why non-official plugins need those id
-    plugins = {
-      autoUpdate = false;
-      notifyUpdates = false;
-      sources = [
-        {
-          enabled = true;
-          name = "official noctalia plugins";
-          url = "https://github.com/noctalia-dev/noctalia-plugins";
-        }
-      ];
-      states = {
-        "kaomoji-provider" = {
-          enabled = true;
-          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-        };
-        "privacy-indicator" = {
-          enabled = true;
-          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-        };
-        "slowbongo" = {
-          enabled = true;
-          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-        };
-      };
-    };
+   # plugins = {
+   #   autoUpdate = false;
+    #  notifyUpdates = false;
+    #  sources = [
+    #    {
+    #      enabled = true;
+    #      name = "official noctalia plugins";
+    #      url = "https://github.com/noctalia-dev/noctalia-plugins";
+    #    }
+    #  ];
+    #  states = {
+    #    "kaomoji-provider" = {
+    #      enabled = true;
+    #      sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+    #    };
+    #    "privacy-indicator" = {
+          #enabled = true;
+          
+         # sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+  #      };
+      #  "slowbongo" = {
+      #    enabled = true;
+      #    sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+      #  };
+    #  };
+   # };
 
     settings = {
 

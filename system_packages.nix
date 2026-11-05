@@ -40,10 +40,10 @@
   # media
   imagemagick
   imv
-  gimp
-  aseprite
-  blender
-  blockbench
+  #gimp
+  #aseprite
+  #blender
+  #blockbench
   ffmpeg
   yt-dlp
   vlc
@@ -59,7 +59,6 @@
   sqlite
   xwayland-satellite
   goog # goog...
-  buoyant
   fuzzel
   cbonsai # tree!!!
   evtest

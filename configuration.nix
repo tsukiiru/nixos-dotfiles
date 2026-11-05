@@ -101,7 +101,7 @@ in
     '';
     fish.enable = true;
     steam = {
-      enable = true;
+      enable = false;
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };

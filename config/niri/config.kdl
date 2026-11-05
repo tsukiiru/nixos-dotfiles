@@ -32,7 +32,7 @@ overview {
     zoom 0.5
 }
 cursor {
-    xcursor-theme "ComixCursors-Black"
+    xcursor-theme "BreezeX-RosePineDawn-Linux"
     xcursor-size 10
 }
 prefer-no-csd
@@ -79,7 +79,7 @@ blur {
     noise 0
     saturation 1.0
 }
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "noctalia"
 spawn-at-startup "fcitx5"
 // spawn-at-startup "wlsunset" "-l" "21.0285" "-L" "105.8542" "-t" "4000" "-T" "4500"
 hotkey-overlay {
@@ -153,22 +153,22 @@ binds {
         spawn "alacritty"
     }
     Mod+Space {
-        spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"
+        spawn "noctalia" "msg" "panel-toggle" "launcher"
     }
     Mod+E {
         spawn "alacritty" "-e" "yazi"
     }
     Mod+W {
-        spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"
+        spawn "noctalia" "msg" "panel-toggle" "session"
     }
     Mod+V {
-        spawn "noctalia-shell" "ipc" "call" "launcher" "clipboard"
+        spawn "noctalia" "msg" "panel-toggle" "clipboard"
     }
     Mod+T {
-        spawn "noctalia-shell" "ipc" "call" "launcher" "emoji"
+        spawn "noctalia" "ipc" "call" "launcher" "emoji"
     }
     Mod+G {
-        spawn "noctalia-shell" "ipc" "call" "wallpaper" "toggle"
+        spawn "noctalia" "msg" "panel-toggle" "wallpaper"
     }
     Mod+R {
         spawn "recorder.sh"

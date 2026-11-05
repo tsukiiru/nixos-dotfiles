@@ -64,8 +64,8 @@ in
           id = "120f8d1a-01ac-4ba8-b24c-23f8cfb7c1ac";
           isEssential = true;
         };
-        "twitter" = {
-          url = "https://twitter.com";
+        "spotify" = {
+          url = "https://open.spotify.com";
           position = 12;
           id = "b7d508a3-9e15-46ed-a27f-476f3512a6af";
           isEssential = true;
@@ -78,7 +78,7 @@ in
         };
 
         #### pins ####
-        "道具" = {
+        "tools" = {
           id = "1786096061977-58";
           isGroup = true;
           editedTitle = true;
@@ -111,15 +111,15 @@ in
               url = "https://figma.com";
               position = 25;
             };
-            "uuid generator" = {
-              id = "629b1e2a-5fe3-44bd-9440-f8d45d9ef0c8";
-              url = "https://www.uuidgenerator.net/version4";
+            "desmos" = {
+              id = "3f98acf9-c785-419c-a8c6-8e27bb5ff9ed";
+              url = "https://desmos.com";
               position = 26;
             };
           };
         };
 
-        "日本語" = {
+        "nixos" = {
           id = "1786096061977-59";
           isGroup = true;
           editedTitle = true;
@@ -127,9 +127,9 @@ in
           workspace = "626dcf32-826a-42e4-8af9-5635e0ffc596";
 
           pins = {
-            "yokubi" = {
-              id = "52700f94-2d61-4c89-815b-c71f8a738a1b";
-              url = "https://yoku.bi";
+            "uuid generator" = {
+              id = "629b1e2a-5fe3-44bd-9440-f8d45d9ef0c8";
+              url = "https://www.uuidgenerator.net/version4";
               position = 31;
             };
           };
@@ -144,6 +144,54 @@ in
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "zen.widget.linux.transparency" = true;
         "browser.tabs.allow_transparent_browser" = true;
+
+        "zia.acrylic-reset" = true;
+        "zia.cards.blur" = true;
+        "zia.compact.hide-toolbar" = false;
+        "zia.compact.sidebar-blur" = true;
+        "zia.essentials.fill-row" = true;
+        "zia.essentials.two-per-row" = true;
+        "zia.essentials.zia-width" = true;
+        "zia.folders.bounce" = true;
+        "zia.folders.tint-card" = true;
+        "zia.folders.tint-when-open" = false;
+        "zia.glance.thumbnail" = true;
+        "zia.haptics.repaired" = true;
+        "zia.media.keep-with-pip" = true;
+        "zia.media.youtube-channel-art	" = false;
+        "zia.multiview.icon-color" = "zia";
+        "zia.newtab.focus-address-bar" = false;
+        "zia.newtab.real-tab" = false;
+        "zia.newtab.search-engine" = false;
+        "zia.page.edge-to-edge" = false;
+        "zia.pdf.dia-style" = true;
+        "zia.pip.tuck-spot" = "nearest";
+        "zia.settings.seen-new" =
+          "zia.tabs.no-pin-slash,zia.sidebar.see-through,zia.spaces.collapse-icons,zia.urlbar.center-bar,zia.install-count";
+        "zia.sidebar-panels.beside" = true;
+        "zia.sidebar-panels.style" = true;
+        "zia.sidebar.hide-space-name" = false;
+        "zia.sidebar.see-through" = 50;
+        "zia.sidebar.space-name-in-list" = true;
+        "zia.sidebar.text-size" = "	small";
+        "zia.sound-bars.always-move" = false;
+        "zia.spaces.collapse-icons" = true;
+        "zia.status-bar" = true;
+        "zia.tab-numbers.always" = true;
+        "zia.tab-numbers.color" = "zia";
+        "zia.tabs.dim-asleep" = true;
+        "zia.tabs.dim-asleep-reset" = true;
+        "zia.tabs.favicon-glow	" = true;
+        "zia.tabs.no-glow" = false;
+        "zia.trim-https-reset" = true;
+        "zia.urlbar.center-bar" = true;
+        "zia.urlbar.center-text" = true;
+        "zia.urlbar.center-text.pop-up-left" = true;
+        "zia.urlbar.full-url" = true;
+        "zia.urlbar.pop-up-blur" = true;
+        "zia.urlbar.site-color" = false;
+        "zia.urlbar.title-only" = true;
+        "zia.welcome.show" = false;
       };
 
       presets.betterfox.enable = true;
@@ -151,7 +199,6 @@ in
       extensions = {
         packages = with firefox-addons; [
           ublock-origin
-          proton-pass
           yomitan
         ];
       };
