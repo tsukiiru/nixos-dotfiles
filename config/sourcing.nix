@@ -6,6 +6,7 @@
     ".config/Wallpapers".source = ./Wallpapers;
     ".config/fastfetch".source = ./fastfetch;
     ".config/alacritty".source = ./alacritty;
+    ".config/noctalia".source = ./noctalia;
     ".local/bin/recorder.sh".source = ./scripts/recorder.sh;
     ".tmux.conf".source = ./.tmux.conf;
     ".face".source = ./.face;
