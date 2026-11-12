@@ -22,11 +22,11 @@ in
     pkg:
     builtins.elem (lib.getName pkg) [
       "aseprite"
-      "steam"
-      "steam-unwrapped"
       "nvidia-x11"
       "nvidia-settings"
       "nvidia-kernel-modules"
+      "davinci-resolve"
+      "obsidian"
     ];
   nixpkgs.config.nvidia.acceptLicense = true;
 

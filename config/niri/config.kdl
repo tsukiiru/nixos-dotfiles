@@ -37,7 +37,7 @@ cursor {
 }
 prefer-no-csd
 layout {
-    gaps 12
+    gaps 24
     center-focused-column "never"
     default-column-width {
         proportion 0.5
@@ -66,7 +66,7 @@ layout {
     }
 }
 window-rule {
-    geometry-corner-radius 16
+    geometry-corner-radius 0
     clip-to-geometry true
     draw-border-with-background false
     background-effect {

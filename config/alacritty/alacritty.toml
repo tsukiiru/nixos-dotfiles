@@ -1,9 +1,9 @@
 [general]
-import = ["rose-pine.toml"]
+import = ["kanagawa-paper-canvas.toml"]
 
 [window]
-decorations = "None"
-opacity = 0.5
+decorations = "Full"
+opacity = 1.0
 padding = { x = 10, y = 10 }
 
 [font]

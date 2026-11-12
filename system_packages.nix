@@ -13,7 +13,7 @@
   wget
   jq
   nodejs_22
-  croc
+  localsend
 
   # tui
   btop
@@ -48,9 +48,11 @@
   yt-dlp
   vlc
   zathura
+  davinci-resolve
 
   # study
   anki
+  obsidian
 
   # fonts
   nerd-fonts.monofur

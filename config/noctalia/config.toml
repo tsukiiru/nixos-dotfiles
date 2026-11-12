@@ -75,18 +75,26 @@ useSeparateOpacity = true
 widgetSpacing = 2
 
     [bar.widgets]
-    background_opacity = 0.59999998658895493
-    center = [ "clock" ]
+    background_opacity = 0.99999997764825821
+    capsule = true
+    capsule_border_width = 0.0
+    capsule_padding = 8.0
+    capsule_radius = 0
+    capsule_thickness = 0.64999998919665813
+    center = [ "launcher", "clock", "separator_1", "weather", "session" ]
+    compositor_blur = false
     concave_edge_corners = false
-    end = [ "cpu", "ram", "tray", "notifications", "volume" ]
-    margin_edge = 6
-    margin_ends = "30%"
-    padding = 16
-    radius = 48
-    radius_bottom_right = 14
-    start = [ "cat", "workspaces", "media" ]
-    thickness = 40
-    widget_spacing = 10
+    end = [ "keyboard_layout", "tray", "notifications", "volume", "cpu", "ram" ]
+    margin_edge = 0
+    margin_ends = "0%"
+    padding = 8
+    panel_overlap = 0
+    radius = 0
+    radius_bottom_right = 0
+    shadow = false
+    start = [ "workspaces", "media_icon", "media" ]
+    thickness = 35
+    widget_spacing = 0
 
         [[bar.widgets.left]]
         id = "plugin:slowbongo"
@@ -256,6 +264,9 @@ position = "bottom_center"
     enabled = false
     id = "media-sysmon-card"
 
+[control_center]
+circular_avatar = false
+
 [desktopWidgets]
 enabled = false
 gridSnap = false
@@ -294,6 +305,7 @@ onlySameOutput = true
 pinnedApps = []
 pinnedStatic = false
 position = "bottom"
+radius = 0
 showDockIndicator = false
 showLauncherIcon = false
 sitOnFrame = false
@@ -376,6 +388,7 @@ suspendCommand = ""
 suspendTimeout = 1800
 
 [location]
+address = "Hanoi"
 analogClockInCalendar = false
 autoLocate = true
 firstDayOfWeek = -1
@@ -571,8 +584,10 @@ showKeybinds = false
 
 [shell]
 avatar_path = "/home/tsuki/.face"
+corner_radius_scale = 0.0
 font_family = "Monofur Nerd Font Propo"
 lang = "en"
+panel_anchor_bar = "widgets"
 
     [shell.launcher]
     categories = false
@@ -582,6 +597,10 @@ lang = "en"
     [shell.panel]
     session_placement = "floating"
     session_position = "center"
+    wallpaper_show_names = false
+
+    [shell.screen_corners]
+    size = 1
 
     [shell.session]
     grid = true
@@ -629,9 +648,13 @@ enableUserTheming = false
 
 [theme]
 builtin = "Noctalia"
-community_palette = "Oxocarbon"
-source = "wallpaper"
-wallpaper_scheme = "m3-content"
+community_palette = "Kanagawa Paper"
+mode = "auto"
+source = "community"
+wallpaper_scheme = "soft"
+
+    [theme.templates]
+    enable_builtin_templates = false
 
 [ui]
 boxBorderEnabled = true
@@ -687,18 +710,25 @@ wallhavenSorting = "relevance"
 wallpaperChangeMode = "random"
 
     [wallpaper.default]
-    path = "/home/tsuki/nixos-dotfiles/config/Wallpapers/False-Memory.webp"
+    path = "/home/tsuki/nixos-dotfiles/config/Wallpapers/false-memory-2.webp"
 
     [wallpaper.last]
-    path = "/home/tsuki/nixos-dotfiles/config/Wallpapers/False-Memory.webp"
+    path = "/home/tsuki/nixos-dotfiles/config/Wallpapers/false-memory-2.webp"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/tsuki/nixos-dotfiles/config/Wallpapers/False-Memory.webp"
+    path = "/home/tsuki/nixos-dotfiles/config/Wallpapers/false-memory-2.webp"
 
     [[wallpaper.monitorDirectories]]
     directory = "/home/tsuki/.config/Wallpapers"
     name = "eDP-1"
     wallpaper = ""
+
+[widget.active_window]
+colorize_icons = true
+display = "icon_only"
+max_length = 40
+min_length = 0
+show_empty_label = true
 
 [widget.cat]
 input_devices = [ "/dev/input/by-id/*-event-*" ]
@@ -706,26 +736,85 @@ scale = 1.2
 type = "noctalia/bongocat:cat"
 
 [widget.clock]
-font_scale = 1.25
-format = "{:%H:%M}\\n{:%a, %b %d}"
+font_scale = 1.1500000000000001
+format = "{:%-I:%M%p}"
+scale = 0.90000000000000013
 vertical_format = "{:%H %M}\\n-\\n{:%d %m}"
 
 [widget.cpu]
-show_value = false
+capsule_padding = 4
+font_scale = 1.1500000000000001
+scale = 0.90000000000000013
+show_value = true
+visualization = "none"
+
+[widget.keyboard_layout]
+capsule_opacity = 0.0
+font_scale = 1.1500000000000001
+scale = 0.90000000000000013
+
+[widget.launcher]
+capsule_opacity = 0.0
+custom_image_colorize = true
+scale = 0.80000000000000004
 
 [widget.media]
-font_scale = 0.90000000000000013
+font_scale = 1.1500000000000001
 hide_album_art = true
-hide_when_no_media = true
+hide_when_no_media = false
 max_length = 170
+scale = 0.90000000000000013
 title_scroll = "on_hover"
 
+[widget.media_icon]
+capsule_padding = 4
+glyph = "music"
+interactive = false
+scale = 0.90000000000000013
+type = "custom_button"
+
+[widget.notifications]
+scale = 0.90000000000000013
+
 [widget.ram]
-show_value = false
+font_scale = 1.1500000000000001
+scale = 0.90000000000000013
+show_value = true
 stat = "ram_pct"
+visualization = "none"
+
+[widget.separator_1]
+glyph = "baseline-density-medium"
+interactive = false
+scale = 0.69999999999999996
+type = "custom_button"
+
+[widget.session]
+capsule_opacity = 0.0
+custom_image_colorize = true
+scale = 0.80000000000000004
+
+[widget.sysmon]
+visualization = "none"
+
+[widget.tray]
+colorize_icons = true
+hidden = [ "fcitx5" ]
+match_adjacent_spacing = true
 
 [widget.volume]
+capsule_padding = 4
 peek = true
+scale = 0.90000000000000013
+
+[widget.weather]
+font_scale = 1.1500000000000001
+scale = 0.90000000000000013
+show_condition = false
 
 [widget.workspaces]
-style = "minimal"
+active_pill_size = 3.7000000000000002
+inactive_pill_size = 0.75
+pill_scale = 0.5
+show_labels = false
+style = "regular"

@@ -9,7 +9,5 @@ in
 
   programs.noctalia = {
     enable = true;
-
-    settings = /home/tsuki/.config/noctalia/config.toml;
   };
 }

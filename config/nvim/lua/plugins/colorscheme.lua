@@ -1,15 +1,15 @@
 return {
-	"rose-pine/neovim",
-	lazy = false,
-	priority = 1000,
+	"thesimonho/kanagawa-paper",
+  branch="neovim",
+	lazy=false,
+	priority=1000,
+  opts = {},
 
-	config = function()
-		require("rose-pine").setup({
-			styles = {
-				transparency = true,
-			},
-			dim_inactive_windows = false,
-		})
-		vim.cmd.colorscheme("rose-pine")
+	config=function()
+		require("kanagawa-paper").setup({
+      cache = true,
+      dim_inactive=true
+    })
+		vim.cmd.colorscheme("kanagawa-paper-canvas")
 	end,
 }
